@@ -1,0 +1,10 @@
+为便于快速 时间固定处理 不用  free alloc 等函数
+把内存分块 达到效果
+
+OS_MEM *OSMemCreate（）  创建内存分区
+
+OSMemGet（） 申请一个内存块 返回void*类型内存
+OSMemput（）释放内存块
+
+
+之后就是一些为内存块命名函数不赘述

@@ -1,0 +1,13 @@
+中断进入时
+OSIntEnter();
+OSIntExit();
+
+
+
+进会停止调度，不会阻止中断。。
+OSSchedLock()
+OSSchedUnlock()
+
+
+该函数类 与通信有关比如信号量 互斥 消息邮箱
+OSEventName

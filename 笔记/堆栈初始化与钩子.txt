@@ -1,0 +1,95 @@
+40. OSInitHookBegin() //OSIinit() 系统初始化函数开头的钩子函数
+41. OSInitHookEnd() //OSIinit() 系统初始化函数结尾的钩子函数
+42. OSTaskCreateHook() //OSTaskCreate()或 OSTaskCreateExt() 创建任务钩子函数
+43. OSTaskDelHook() //OSTaskDel() 删除任务钩子函数
+44. OSTaskIdleHook() //OS_TaskIdle() 空闲任务钩子函数
+45. OSTaskStatHook() //OSTaskStat() 统计任务钩子函数
+46. OSTaskSwHook() //OSTaskSW() 任务切换钩子函数
+47. OSTCBInitHook() //OS_TCBInit() 任务控制块初始化钩子函数
+48. OSTimeTickHook() //OSTaskTick() 时钟节拍钩子函数
+
+ OS_CFG.H 中定义 OS_CPU_HOOKS_EN 为 1
+ void OSInitHookBegin(void)
+ {
+	 #if OS_TMR_EN>0
+		OSTmrCtr=0;
+	#endif
+ }
+ 
+ void OSTaskCreateHook(OS_TCB *ptcb)
+ {
+	#if OS_APP_HOOKS_EN>0
+		App_TaskCreateHook(ptcb);
+	#else
+		(void)ptcb;
+	#endif
+ }
+ 
+ void OSTaskSwHook(void)
+ {
+	 #if OS_APP_HOOKS_EN>0
+	 App_TaskSwHook();
+	 #endif
+ }
+ void OSTimeTickHook(void)
+ {
+	 #if OS_APP_HOOKS_EN>0
+	 App_TimeTickHook();
+	 #endif
+	 
+	 #if OS_TMR_EN>0
+	 OSTmrCtr++;
+	 if(OSTmrCtr>=(OS_TICKS_PER_SEC/ OS_TMR_CFG_TICKS_PER_SEC))
+	 {
+		 OSTmrCtr=0;
+		 OSTmrSignal();
+	 }
+	 #endif
+ }
+ 
+ 
+ OSTaskStkInit();
+ //KUANG JIA
+ 1. void MyTask (void *p_arg)
+92. {
+93. 
+94. while (1) {
+
+96. }
+
+97. }
+
+
+//M3 的栈生长方向是由高地址向低地址增长的
+//任务没开始值没意义
+OS_STK* OSTaskStkInit(void(*task)(void *pd),void *p_arg
+OS_STK*ptos,INT16U opt)
+{
+	OS_STK* stk;
+	void(opt);
+	stk=ptos;
+	/* 中断后 xPSR，PC，LR，R12，R3-R0 被自动保存到栈中*/
+108. *(stk) = (INT32U)0x01000000L; // xPSR
+109. *(--stk) = (INT32U)task; // 任务入口 (PC)
+110. *(--stk) = (INT32U)0xFFFFFFFEL; // R14 (LR)
+111. *(--stk) = (INT32U)0x12121212L; // R12
+112. *(--stk) = (INT32U)0x03030303L; // R3
+113. *(--stk) = (INT32U)0x02020202L; // R2
+114. *(--stk) = (INT32U)0x01010101L; // R1
+115. *(--stk) = (INT32U)p_arg; // R0 : 变量
+116.
+117. /* 剩下的寄存器需要手动保存在堆栈 */
+118. *(--stk) = (INT32U)0x11111111L; // R11
+119. *(--stk) = (INT32U)0x10101010L; // R10
+120. *(--stk) = (INT32U)0x09090909L; // R9
+121. *(--stk) = (INT32U)0x08080808L; // R8
+122. *(--stk) = (INT32U)0x07070707L; // R7
+123. *(--stk) = (INT32U)0x06060606L; // R6
+124. *(--stk) = (INT32U)0x05050505L; // R5
+125. *(--stk) = (INT32U)0x04040404L; // R4
+126.
+127. return (stk);
+	
+}
+
+

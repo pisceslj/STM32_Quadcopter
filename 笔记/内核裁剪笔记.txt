@@ -1,0 +1,16 @@
+os_cfg.h 对宏进行set 
+禁用信号量、互斥信号量、邮箱、队列、信号量集、定时器、内存管理，关闭调试模式
+336.#define OS_FLAG_EN 0 // 禁用信号量集
+337.#define OS_MBOX_EN 0 // 禁用邮箱
+338.#define OS_MEM_EN 0 // 禁用内存管理
+339.#define OS_MUTEX_EN 0 // 禁用互斥信号量
+340.#define OS_Q_EN 0 // 禁用队列
+341.#define OS_SEM_EN 0 // 禁用信号量
+342.#define OS_TMR_EN 0 // 禁用定时器
+343.#define OS_DEBUG_EN 0 //
+
+4.#define OS_APP_HOOKS_EN 0
+345.#define OS_EVENT_MULTI_EN 0
+
+
+  修改  os_cpu_c.c 定时器函数及其宏全部注释

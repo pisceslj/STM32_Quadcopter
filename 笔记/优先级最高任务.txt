@@ -1,0 +1,11 @@
+OSStartHighRdy
+ LDR R0,=NVIC_SYSPRI14;
+ LDR,R1,=NVIC_PENSV_PRI;
+ STRB R1,[R0];
+ 
+ MOV R0,#0
+ MSR PSP, R0 ; 将 R0 的内容加载到程序状态寄存器 PSR 的指定字段
+ LDR R0, __OS_Running
+ MOV R1,#1
+ STRB R1,[R0]
+ LDR

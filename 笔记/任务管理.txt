@@ -1,0 +1,12 @@
+OSTaskCreate()  Ext 
+OSTaskDel() xiumian
+
+OSTaskDelReq()  请求任务删除 中断中不能用
+OSTaskChangePrio() 改变任务优先级
+
+//无条件挂起   恢复且唯一能恢复被suspend挂起任务
+OSTaskSuspend()
+OSTaskResume()
+
+还有一组对任务命名查询不在记录
+

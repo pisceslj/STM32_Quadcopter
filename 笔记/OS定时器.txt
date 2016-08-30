@@ -1,0 +1,9 @@
+
+创建一个定时器 定时器周期性的运行  当减少到0时 调用回调函数
+OSTmrCreate（）
+
+OSTmrStart（） 启动
+
+OSTmrDel（） 停止后删除
+
+OSTmrSignal（）刷新数值
