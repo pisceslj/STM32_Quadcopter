@@ -12,9 +12,9 @@ int main(void)
 	PIDQ=OSQCreate(QMessagePID,QSIZE);
 	PCQ=OSQCreate(QMessagePC,QSIZE);
 	
-	OSTaskCreate(Task_Start,(void *)0,
-	&startup_task_stk[STARTUP_TASK_STK_SIZE-1], STARTUP_TASK_PRIO);
+	OSTaskCreate(Task_Start,(void *)0,&startup_task_stk[STARTUP_TASK_STK_SIZE-1], STARTUP_TASK_PRIO);//创建任务
 
-	OSStart();       //启动调度
+	OSStart();  //启动调度
+	
 	return 0;
- }
+}

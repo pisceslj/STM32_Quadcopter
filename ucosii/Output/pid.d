@@ -1,1 +1,15 @@
 ..\..\output\pid.o: ..\..\BSP\PID\Pid.c
+..\..\output\pid.o: ..\..\BSP\PID\Pid.h
+..\..\output\pid.o: ..\..\Libraries\CMSIS\stm32f10x.h
+..\..\output\pid.o: ..\..\Libraries\CMSIS\core_cm3.h
+..\..\output\pid.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\pid.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
+..\..\output\pid.o: ..\..\User\stm32f10x_conf.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
+..\..\output\pid.o: ..\..\Libraries\CMSIS\stm32f10x.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\stm32f10x_flash.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
+..\..\output\pid.o: ..\..\Libraries\FWlib\inc\misc.h

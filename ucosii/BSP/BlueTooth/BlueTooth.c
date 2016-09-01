@@ -3,12 +3,15 @@
 #include <stdio.h>
 #include <string.h>
 #include "ucos_ii.h"
-#define USART3_REC_LEN  			200 
+
+#define USART3_REC_LEN  	  200 
 #define USART3_TX_LEN  			200 
+
 //串口3中断服务程序
 //注意,读取USARTx->SR能避免莫名其妙的错误   
 u8 USART3_RX_BUF[USART3_REC_LEN]={0};     //接收缓冲,最大USART_REC_LEN个字节.
 u8 USART3_TX_BUF[USART3_TX_LEN]={0};
+
 //接收状态
 //bit15，	接收完成标志
 //bit14，	接收到0x0d
@@ -78,12 +81,19 @@ void USART3_IRQHandler(void)
 		
 		if((USART3_RX_STA&0X8000)==0)//接收未完成
 			{
-				if(Res=='#'){USART3_RX_STA|=0X8000;Command_Read();}
+				if(Res=='#')
+				{
+				   USART3_RX_STA|=0X8000;
+				   Command_Read();
+				}
 				else
-					{
+				{
 					USART3_RX_BUF[USART3_RX_STA++]=Res;
-					if(USART3_RX_STA>(USART3_REC_LEN-1)){USART3_RX_STA=0;}//接收数据错误,重新开始接收	  
-					}		 
+					if(USART3_RX_STA>(USART3_REC_LEN-1))//接收数据错误,重新开始接收	
+             {
+						     USART3_RX_STA=0;
+						 }  
+				}		 
 			}   		 
 		}
 		OSIntExit();		

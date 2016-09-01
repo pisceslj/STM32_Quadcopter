@@ -2,7 +2,7 @@
 ..\..\output\rev.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\rev.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\rev.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\rev.o: H:\Install\ARM\ARMCC\bin\..\include\stdint.h
+..\..\output\rev.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\rev.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\rev.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\rev.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -28,10 +28,10 @@
 ..\..\output\rev.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\rev.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\rev.o: ..\..\User\includes.h
-..\..\output\rev.o: H:\Install\ARM\ARMCC\bin\..\include\math.h
+..\..\output\rev.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\rev.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\rev.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\rev.o: ..\..\BSP\Usart\usart1.h
-..\..\output\rev.o: H:\Install\ARM\ARMCC\bin\..\include\stdio.h
+..\..\output\rev.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\rev.o: ..\..\APP\app.h
-..\..\output\rev.o: H:\Install\ARM\ARMCC\bin\..\include\stdarg.h
+..\..\output\rev.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h

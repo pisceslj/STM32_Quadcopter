@@ -2,7 +2,7 @@
 ..\..\output\gps.o: ..\..\BSP\GPS\GPS.h
 ..\..\output\gps.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\gps.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\gps.o: H:\Install\ARM\ARMCC\bin\..\include\stdint.h
+..\..\output\gps.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\gps.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\gps.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\gps.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -14,7 +14,7 @@
 ..\..\output\gps.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 ..\..\output\gps.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\gps.o: ..\..\BSP\Usart\usart1.h
-..\..\output\gps.o: H:\Install\ARM\ARMCC\bin\..\include\stdio.h
-..\..\output\gps.o: H:\Install\ARM\ARMCC\bin\..\include\stdarg.h
-..\..\output\gps.o: H:\Install\ARM\ARMCC\bin\..\include\string.h
-..\..\output\gps.o: H:\Install\ARM\ARMCC\bin\..\include\math.h
+..\..\output\gps.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\gps.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\gps.o: H:\Install\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\gps.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h

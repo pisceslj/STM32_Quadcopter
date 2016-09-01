@@ -45,8 +45,8 @@ void Task_Start(void *p_arg)
  (void)p_arg; // 'p_arg' 并没有用到，防止编译器提示警告
 
 	 
-	//读取flash中预设参数@@@
- 
+ //读取flash中预设参数@@@
+
  
 	
 	//创建其他任务@@@
@@ -76,8 +76,6 @@ void Task_Start(void *p_arg)
 
  while (1)
  {
-	 
-	 
 	 //从消息队列中获取上位机命令做出响应,数据放入消息队列并发送给上位机
 	 //接受信息 主要是PID参数的接收
 	 OSQAccept(MainQ,&errMainQ);	 

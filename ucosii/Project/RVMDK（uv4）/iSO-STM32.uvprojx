@@ -10,6 +10,7 @@
       <TargetName>os__stm32</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103ZE</Device>
@@ -568,6 +569,11 @@
               <FileName>IIC.txt</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Doc\IIC.txt</FilePath>
+            </File>
+            <File>
+              <FileName>README.md</FileName>
+              <FileType>9</FileType>
+              <FilePath>..\..\Doc\README.md</FilePath>
             </File>
           </Files>
         </Group>
