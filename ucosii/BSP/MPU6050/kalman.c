@@ -2,12 +2,12 @@
 #include "MPU6050.h"
 #include "math.h"
 
-float Accel_x;	     //X轴加速度值暂存
-float Accel_y;	     //Y轴加速度值暂存
-float Accel_z;	     //Z轴加速度值暂存
+float Accel_x;	    //X轴加速度值暂存
+float Accel_y;	    //Y轴加速度值暂存
+float Accel_z;	    //Z轴加速度值暂存
 
-float Gyro_x;		 			//X轴陀螺仪数据暂存
-float Gyro_y;        //Y轴陀螺仪数据暂存
+float Gyro_x;		 		//X轴陀螺仪数据暂存
+float Gyro_y;       //Y轴陀螺仪数据暂存
 float Gyro_z;		 		//Z轴陀螺仪数据暂存
 
 float magn_x;		 		//X轴磁场数据暂存
@@ -44,7 +44,6 @@ void Angle_Calcu(void)
   magn_y=Magn_y;    
   magn_z=Magn_z;	
 
-
 	//处理x轴加速度
 	if(Accel_x<32764) x=Accel_x/16384;
 	else              x=(32768-Accel_x)/16384;
@@ -64,7 +63,7 @@ void Angle_Calcu(void)
 	
 	//磁场处理
 	if(magn_x<32764) x=magn_x/16384;
-	else              x=(32768-magn_x)/16384;
+	else             x=(32768-magn_x)/16384;
 		
 	if(magn_y<32764) y=magn_y/16384;
 	else              y=(32768-magn_y)/16384;//1-(Accel_y-49152)/16384;
@@ -90,9 +89,6 @@ void Angle_Calcu(void)
 	Angle_z_temp= atan2(hy,hx) * (180 / 3.14159265);//+180
 	Angle_z_temp-=angle;
 	
-	
-
-	
 	//角速度
 	//向前运动
 	if(Gyro_x<32768) Gyro_x=-(Gyro_x/16.4);//范围为1000deg/s时，换算关系：16.4 LSB/(deg/s)
@@ -112,9 +108,6 @@ void Angle_Calcu(void)
 	Kalman_Filter_Y(Angle_y_temp,Gyro_y);  //卡尔曼滤波计算Y倾角
 	Kalman_Filter_Y(Angle_z_temp,Gyro_z);  //卡尔曼滤波计算Z倾角													  
 } 
-
-
-
 
 //卡尔曼参数		
 float Q_angle = 0.001;  //预测因素（两个）  噪声 协方差  
@@ -219,7 +212,7 @@ void Kalman_Filter_Y(float Accel,float Gyro) //卡尔曼函数
 
 	Pdot[1]= - PPY[1][1];
 	Pdot[2]= - PPY[1][1];
-	Pdot[3]=Q_gyro;
+	Pdot[3]= Q_gyro;
 	
 	PPY[0][0] += Pdot[0] * dt;   // Pk-先验估计误差协方差微分的积分
 	PPY[0][1] += Pdot[1] * dt;   // =先验估计误差协方差
@@ -239,17 +232,15 @@ void Kalman_Filter_Y(float Accel,float Gyro) //卡尔曼函数
 	t_0 = PCt_0;
 	t_1 = C_0 * PPY[0][1];
 
-
 	PPY[0][0] -= K_0 * t_0;		 //后验估计误差协方差
 	PPY[0][1] -= K_0 * t_1;
 	PPY[1][0] -= K_1 * t_0;
 	PPY[1][1] -= K_1 * t_1;
 		
-	Angle_Y_Final	+= K_0 * Angle_err;	 //后验估计
-	Q_biasy	+= K_1 * Angle_err;	 //后验估计
-	Gyro_y   = Gyro - Q_biasy;	 //输出值(后验估计)的微分=角速度
+	Angle_Y_Final	+= K_0 * Angle_err;	 	//后验估计
+	Q_biasy	+= K_1 * Angle_err;	 				//后验估计
+	Gyro_y   = Gyro - Q_biasy;	 				//输出值(后验估计)的微分=角速度
 }
-
 
 float PPZ[2][2] = { { 1, 0 },{ 0, 1 } };
 float Q_biasz=0;
@@ -280,7 +271,6 @@ void Kalman_Filter_Z(float Accel,float Gyro) //卡尔曼函数
 	
 	t_0 = PCt_0;
 	t_1 = C_0 * PPZ[0][1];
-
 
 	PPZ[0][0] -= K_0 * t_0;		 //后验估计误差协方差
 	PPZ[0][1] -= K_0 * t_1;

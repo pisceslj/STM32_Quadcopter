@@ -131,7 +131,7 @@ unsigned char iic_readx(void)
    //SCL=0;
     GPIO_ResetBits(GPIOB, SCL);
     delay_nop(); 
- //SDA=1;
+	//SDA=1;
  GPIO_SetBits(GPIOB,SDA);
 
  iic_SDA_Set_Dir(1);

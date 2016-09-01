@@ -11,7 +11,7 @@
 // 定义MPU6050内部地址
 //****************************************
 #define	SMPLRT_DIV		0x19	//陀螺仪采样率，典型值：0x07(125Hz)
-#define	CONFIG			0x1A	//低通滤波频率，典型值：0x06(5Hz)
+#define	CONFIG			0x1A	  //低通滤波频率，典型值：0x06(5Hz)
 #define	GYRO_CONFIG		0x1B	//陀螺仪自检及测量范围，典型值：0x18(不自检，2000deg/s)
 #define	ACCEL_CONFIG	0x1C	//加速计自检测量范围及高通滤波频率，典型值：0x01(不自检，2G，5Hz)
 
@@ -36,17 +36,17 @@
 #define	GYRO_ZOUT_L		0x48
 
 #define	PWR_MGMT_1		0x6B	//电源管理，典型值：0x00(正常启用)
-#define	WHO_AM_I		0x75	//IIC地址寄存器(默认数值0x68，只读)
+#define	WHO_AM_I		0x75	  //IIC地址寄存器(默认数值0x68，只读)
 
 u8 TX_DATA[4];  	 //显示据缓存区
-u8 BUF[10];       //接收数据缓存区	
+u8 BUF[10];        //接收数据缓存区	
 uint16_t GYRO_XOUT,GYRO_YOUT,GYRO_ZOUT,ACCEL_XOUT,ACCEL_YOUT,ACCEL_ZOUT,MP6050_Temperature;//X,Y,Z轴，温度	
 float Angle_X_Error=0.0f, Angle_Y_Error=0.0f,Angle_Z_Error=0.0f;
 
 void Init_MPU6050(void)
 {
-//	int i;
-  I2C_WriteByte(MPU6050_Addr,PWR_MGMT_1, 0x00);	//解除休眠状态
+//int i;
+  I2C_WriteByte(MPU6050_Addr,PWR_MGMT_1, 0x00);	   //解除休眠状态
 	
 	
 	I2C_WriteByte(MPU6050_Addr,SMPLRT_DIV, 0x07);    //陀螺仪采样率

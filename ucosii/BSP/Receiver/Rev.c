@@ -27,8 +27,8 @@ u32 tim2_T4;
 
 int pwmout1, pwmout2, pwmout3, pwmout4; 				//输出占空比
 
-
-void Rev_GPIO_init(){
+void Rev_GPIO_init()
+{
 	GPIO_InitTypeDef GPIO_tim;
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_AFIO, ENABLE);
@@ -39,7 +39,8 @@ void Rev_GPIO_init(){
 	GPIO_ResetBits(GPIOA, GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3); //下拉
 }
 
-void Rev_NVIC_TIM_init(){
+void Rev_NVIC_TIM_init()
+{
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
 	TIM_ICInitTypeDef TIM2_ICInitStructure;
 	NVIC_InitTypeDef  NVIC_TIM2;
@@ -99,9 +100,7 @@ void Rev_NVIC_TIM_init(){
 
 void TIM2_IRQHandler(void)
 {
-	
 		OSIntEnter();
-
 
 	if ((TIM2CH1_CAPTURE_STA & 0X80) == 0) 		//还未成功捕获	
 	{
