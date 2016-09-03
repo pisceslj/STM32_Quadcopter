@@ -18,7 +18,7 @@ extern u16 USART2_RX_STA;
 extern uint16_t GYRO_XOUT,GYRO_YOUT,GYRO_ZOUT,ACCEL_XOUT,ACCEL_YOUT,ACCEL_ZOUT,MP6050_Temperature;//X,Y,Z轴，温度
 extern float Angle_X_Error, Angle_Y_Error,Angle_Z_Error;
 extern int Magn_x,Magn_y,Magn_z;
-extern float angle;	//正北方向(约地磁南极)为标准 方位角
+extern float angle;																		//正北方向(约地磁南极)为标准 方位角
 
 //发向主任务
 
@@ -268,47 +268,44 @@ void Task_atttitude_pid(void *p_arg)
 //优先级8
 void Task_GPS(void *p_arg)
 {
- (void)p_arg;	
- while (1)
- {
-	//获取GPS@@@
+		(void)p_arg;	
+		while (1)
+		{
+			//获取GPS@@@
 	
-	 //目前不太清楚@@@    @。@
+			//目前不太清楚@@@    @。@
 	 
-	 
- OSTimeDlyHMSM(0, 0,0,20);
-
- }
+			OSTimeDlyHMSM(0, 0,0,20);
+		}
 }
-
-
 
 
 //DEBUG
 //任务 2
 void Task_LED2(void *p_arg)
 {
- (void)p_arg;
-
- while (1)
- {
- LED2( ON );
- OSTimeDlyHMSM(0, 0,0,200);
- LED2( OFF);
- OSTimeDlyHMSM(0, 0,0,200);
- }
+		(void)p_arg;    //防止编译器提示警告
+		while (1)
+		{
+				LED2( ON );
+				OSTimeDlyHMSM(0, 0,0,200);
+				LED2( OFF );
+				OSTimeDlyHMSM(0, 0,0,200);
+		}
 }
 
 //任务 3
 void Task_LED3(void *p_arg)
 {
- (void)p_arg;
-
- while (1)
- {
- LED3( ON );
- OSTimeDlyHMSM(0, 0,0,300);
- LED3( OFF);
- OSTimeDlyHMSM(0, 0,0,300);
- }
+			(void)p_arg;	 //防止编译器提示警告
+			while (1)
+			{
+					LED3( ON );
+					OSTimeDlyHMSM(0, 0,0,300);
+					LED3( OFF);
+					OSTimeDlyHMSM(0, 0,0,300);
+			}
 }
+
+
+

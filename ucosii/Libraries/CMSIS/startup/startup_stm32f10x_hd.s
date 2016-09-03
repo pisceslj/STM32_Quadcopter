@@ -34,7 +34,7 @@
 
 Stack_Size      EQU     0x00000400
 
-                AREA    STACK, NOINIT, READWRITE, ALIGN=3
+                AREA    STACK, NOINIT, READWRITE, ALIGN=3   ;8字节对齐
 Stack_Mem       SPACE   Stack_Size
 __initial_sp
                                                   
@@ -189,7 +189,7 @@ DebugMon_Handler\
                 EXPORT  DebugMon_Handler           [WEAK]
                 B       .
                 ENDP
-OS_CPU_PendSVHandler  PROC
+OS_CPU_PendSVHandler  PROC                         ;修改PendSV_Handler为OS_CPU_PendSVHandler
                 EXPORT   OS_CPU_PendSVHandler             [WEAK]
                 B       .
                 ENDP

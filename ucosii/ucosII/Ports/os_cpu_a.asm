@@ -51,7 +51,12 @@ NVIC_PENDSVSET  EQU     0x10000000                              ; Value to trigg
 ;                                      CODE GENERATION DIRECTIVES
 ;********************************************************************************************************
 
-        AREA |.text|, CODE, READONLY, ALIGN=2
+        AREA |.text|, CODE, READONLY, ALIGN=2     ;4字节对齐
+			
+		THUMB                                     ;Thumb代码
+			
+        REQUIRE8                                  ;堆栈8字节对齐
+        PRESERVE8		                          ;令当前文件堆栈保持8字节对齐
 
 ;********************************************************************************************************
 ;                                   CRITICAL SECTION METHOD 3 FUNCTIONS

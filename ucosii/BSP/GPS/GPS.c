@@ -1,6 +1,6 @@
 #include "GPS.h"
 #include "usart1.h"
-//#include "stdio.h"	 
+#include "stdio.h"	 
 #include "stdarg.h"	 
 #include "string.h"	 
 #include "math.h"
@@ -18,8 +18,9 @@ u16 USART2_RX_STA=0;       //接收状态标记
 u8 TEMP_BUF[USART2_REC_LEN];
 nmea_msg gpsx; 											//GPS信息
 
-
-void GPS_GPIO_init(){
+/* 初始化GPS的GPIO */
+void GPS_GPIO_init()
+{
 	GPIO_InitTypeDef GPIO_InitStructure;
 	USART_InitTypeDef USART_InitStructure;
 	
@@ -30,23 +31,25 @@ void GPS_GPIO_init(){
 	GPIO_Init(GPIOB, &GPIO_InitStructure);  
  // GPIO_SetBits(GPIOB, GPIO_Pin_5);//设置端口为高电平	
 	
-		/* 配置串口2 （USART2） 时钟*/
+	/* 配置串口2 （USART2） 时钟*/
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_AFIO, ENABLE);
-	GPIO_PinRemapConfig(GPIO_Remap_USART2 ,ENABLE); 
+	
 	/*串口GPIO端口配置*/
   /* 配置串口2 （USART2 Tx (PD5)）*/
+	GPIO_PinRemapConfig(GPIO_Remap_USART2 ,ENABLE); 
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOD, &GPIO_InitStructure);    
+	GPIO_Init(GPIOD, &GPIO_InitStructure);  
+  
 	/* 配置串口2 USART2 Rx (PD6)*/
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
 	  
-		/* 串口2工作模式（USART2 mode）配置 */
-	USART_InitStructure.USART_BaudRate = 9600;//一般设置为9600;
+	/* 串口2工作模式（USART2 mode）配置 */
+	USART_InitStructure.USART_BaudRate = 9600;			//一般设置为9600;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
 	USART_InitStructure.USART_Parity = USART_Parity_No ;
@@ -59,65 +62,74 @@ void GPS_GPIO_init(){
 	USART_Cmd(USART2, DISABLE);//不使能串口
 }
 
-void USART2_NVIC_Config(){
+/* 配置嵌套向量中断控制器 */
+void USART2_NVIC_Config()
+{
 	NVIC_InitTypeDef NVIC_InitStructure;
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);//设置中断优先级
 	NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1 ;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;		
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			//IRQ通道使能
-	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化NVIC寄存器
+	NVIC_Init(&NVIC_InitStructure);								//根据指定的参数初始化NVIC寄存器
 }
 
-void USART2_IRQHandler(){
-		u8 Res;
+/*  */
+void USART2_IRQHandler()
+{
+	u8 Res;
 	if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
-		{
+	{
 		Res =USART_ReceiveData(USART2);//(USART1->DR);	//读取接收到的数据
 		
 		if((USART2_RX_STA&0x8000)==0)//接收未完成
-			{
+		{
 			if(USART2_RX_STA&0x4000)//接收到了0x0d
-				{
+			{
 				if(Res!=0x0a)USART2_RX_STA=0;//接收错误,重新开始
 				else {USART2_RX_STA&=0x3FFF;GPS_Read(); }//接收完成了 
-				}
+			}
 			else //还没收到0X0D
-				{	
-				if(Res==0x0d)USART2_RX_STA|=0x4000;
+			{	
+				if(Res==0x0d)
+					USART2_RX_STA|=0x4000;
 				else
-					{
+				{
 					USART2_RX_BUF[USART2_RX_STA&0X3FFF]=Res ;
 					USART2_RX_STA++;
 					if(USART2_RX_STA>(USART2_REC_LEN-1))USART2_RX_STA=0;//接收数据错误,重新开始接收	  
-					}		 
-				}
-			}   		 
-		}
-
+				}		 
+			}
+		}   		 
+	}
 }
 
-void GPS_Read(){
+void GPS_Read()
+{
 	int i=0;
 	u16 len = USART2_RX_STA&0X3FFF;
-	for(i=0;i<len;i++){
-			TEMP_BUF[i]=USART2_RX_BUF[i];	 }  
+	for(i=0;i<len;i++)
+	{
+			TEMP_BUF[i]=USART2_RX_BUF[i];	 
+	}  
 	TEMP_BUF[i]=0;				//自动添加结束符
 	GPS_Analysis(&gpsx,(u8*)TEMP_BUF);//分析字符串
 	Gps_Msg_Show();				//显示信息	 
 	clear();
 	USART2_RX_STA=0;
-
 }
 
-void clear(){
+void clear()
+{
 		int i=0;
-		for(i=0;i<USART2_REC_LEN;i++){
-	 USART2_RX_BUF[i]=0;
-	}
+		for(i=0;i<USART2_REC_LEN;i++)
+	  {
+			USART2_RX_BUF[i]=0;
+		}
 }
 
-void Gps_Msg_Show(){
+void Gps_Msg_Show()
+{
 	float tp;		
 	tp=gpsx.longitude;	  
 	printf("Longitude:%.5f %1c   \r\n",tp/=100000,gpsx.ewhemi);	//得到经度字符串  
@@ -152,6 +164,7 @@ u8 NMEA_Comma_Pos(u8 *buf,u8 cx)
 	}
 	return buf-p;	 
 }
+
 //m^n函数
 //返回值:m^n次方.
 u32 NMEA_Pow(u8 m,u8 n)
@@ -160,6 +173,7 @@ u32 NMEA_Pow(u8 m,u8 n)
 	while(n--)result*=m;    
 	return result;
 }
+
 //str转换为数字,以','或者'*'结束
 //buf:数字存储区
 //dx:小数点位数,返回给调用函数

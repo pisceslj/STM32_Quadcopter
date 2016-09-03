@@ -4,7 +4,7 @@ void BSP_Init()
 {
 	/* 配置系统时钟为72M  3.5库中启动文件已调用*/
 	
-	SysTick_init(); /* 初始化并使能 SysTick 定时器 */
+	SysTick_init(); 		 /* 初始化并使能 SysTick 定时器 */
 	//LED_GPIO_Config(); /* LED 端口初始化 指示作用*/
 }
 

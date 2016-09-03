@@ -17,4 +17,5 @@
 #define TASK_STK_SIZE 80
 #define TASK_LED2_STK_SIZE 80
 #define TASK_LED3_STK_SIZE 80
+
 #endif
