@@ -24,7 +24,8 @@
 |          |--IIC.txt
 |          |--README.md
 |
-|--BSP     |--BSP.c                         |--BSP及SysTick初始化及使能
+|--BSP     存放外设硬件驱动程序
+|          |--BSP.c                         |--BSP及SysTick初始化及使能
 |          |--BlueTooth.c
 |          |--GPS.c
 |          |--I2cdev.c
@@ -37,7 +38,8 @@
 |          |--HMC5883L.c
 |          |--Pid.c
 |
-|--APP     |--app.c
+|--APP     存放应用软件程序
+|          |--app.c
 |          
 |--SOURCES |--os_core.c
 |          |--os_flag.c

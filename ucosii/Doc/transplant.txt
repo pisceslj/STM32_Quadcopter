@@ -1,0 +1,33 @@
+移植操作系统
+|——————————————————————————————————————————————————————————
+|
+|配置UCOSII/PORTS/os_dbg.c/os_cfg.h
+|1.禁用信号量，互斥信号量，邮箱，队列，信号量集，定时器，内存管理，关闭调试模式；
+|
+|#define OS_FLAG_EN 0  //禁用信号量
+|#define OS_MBOX_EN 0  //禁用邮箱
+|#define OS_MEM_EN 0   //禁用内存管理
+|#define OS_MUTEX_EN 0 //禁用互斥信号量
+|#define OS_Q_EN 0     //禁用队列
+|#define OS_SEM_EN 0   //禁用信号量
+|#define OS_TMR_EN 0   //禁用定时器
+|#define OS_DEBUG_EN 0 //关闭调试模式
+|
+|2.禁用软件钩子函数，多重事件控制
+|
+|#define OS_APP_HOOKS_EN 0     //禁用钩子函数
+|#define OS_EVENT_MULTI_EN 0   //禁用多重事件控制
+|
+|——————————————————————————————————————————————————————————————
+
+|______________________________________________________________
+|
+|配置UCOSII/PORTS/os_dbg.c/os_cpu.h,注释以下三个函数：
+|void OS_CPU_SysTickHandler(void);
+|void OS_CPU_SysTickInit(void);
+|INT32U OS_CPU_SysTickClkFreq(void);
+|
+|配置UCOSII/PORTS/os_cpu_c.c
+|注释掉以上三个函数的具体实现
+|——————————————————————————————————————————————————————————————
+

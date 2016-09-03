@@ -89,7 +89,7 @@ void USART3_IRQHandler(void)
 				else
 				{
 					USART3_RX_BUF[USART3_RX_STA++]=Res;
-					if(USART3_RX_STA>(USART3_REC_LEN-1))//接收数据错误,重新开始接收	
+					if(USART3_RX_STA>(USART3_REC_LEN-1))	//接收数据错误,重新开始接收	
              {
 						     USART3_RX_STA=0;
 						 }  
@@ -99,8 +99,10 @@ void USART3_IRQHandler(void)
 		OSIntExit();		
 }
 
-void Command_Read(){
-	if(USART3_RX_STA&0x8000){
+void Command_Read()
+ {
+	if(USART3_RX_STA&0x8000)
+		{
        if(strcmp((const char*)USART3_RX_BUF,"Yes")==0)u3_printf("copy");
 			 if(strcmp((const char*)USART3_RX_BUF,"No")==0)u3_printf("ok");
 		}
@@ -113,7 +115,8 @@ void Command_Read(){
 	}
 
 
-void RX_BUF_Clear(){
+void RX_BUF_Clear()
+{
 	int i;
 	for(i=0;i<USART3_REC_LEN;i++){USART3_RX_BUF[i]=0;}
 }

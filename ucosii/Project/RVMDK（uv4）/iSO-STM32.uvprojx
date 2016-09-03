@@ -137,7 +137,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>Segger\JL2CM3.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -413,7 +413,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>FWLB</GroupName>
+          <GroupName>FWLIB</GroupName>
           <Files>
             <File>
               <FileName>misc.c</FileName>
@@ -572,8 +572,13 @@
             </File>
             <File>
               <FileName>README.md</FileName>
-              <FileType>9</FileType>
+              <FileType>5</FileType>
               <FilePath>..\..\Doc\README.md</FilePath>
+            </File>
+            <File>
+              <FileName>transplant.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Doc\transplant.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -708,7 +713,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>UCOSII/PROTS</GroupName>
+          <GroupName>UCOSII/PORTS</GroupName>
           <Files>
             <File>
               <FileName>os_cpu_c.c</FileName>
