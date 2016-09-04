@@ -40,9 +40,13 @@ This structure is as follows:
 |          |--tim7.c  
 |          |--usart1.c
 |          |--HMC5883L.c
-|          |--Pid.c
+|          |--IMU.c
 |
 |--APP     |--app.c
+|          |--BlueTooth.c
+|          |--Pid.c
+|          |--Control.c
+|          |--LED.c
 |          
 |--SOURCES |--os_core.c
 |          |--os_flag.c
