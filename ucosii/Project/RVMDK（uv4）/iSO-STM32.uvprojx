@@ -641,9 +641,14 @@
               <FilePath>..\..\BSP\HMC5883L\HMC5883L.c</FilePath>
             </File>
             <File>
-              <FileName>Pid.c</FileName>
+              <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\BSP\PID\Pid.c</FilePath>
+              <FilePath>..\..\BSP\bsp_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\IMU\IMU.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -654,6 +659,31 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\APP\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>BlueTooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\BlueTooth.c</FilePath>
+            </File>
+            <File>
+              <FileName>Pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\Pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>Control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\Control.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\GPS.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\LED.c</FilePath>
             </File>
           </Files>
         </Group>
