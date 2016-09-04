@@ -34,4 +34,4 @@
 ..\..\output\imu.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\imu.o: ..\..\APP\app.h
 ..\..\output\imu.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h
-..\..\output\imu.o: ..\..\BSP\IMU\../../BSP/IMU/IMU.h
+..\..\output\imu.o: ..\..\BSP\IMU\IMU.h

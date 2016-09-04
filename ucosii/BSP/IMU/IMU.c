@@ -1,7 +1,7 @@
 #include "MPU6050.h"
 #include "math.h"
 #include "includes.h"
-#include "../../BSP/IMU/IMU.h"
+#include "IMU.h"
 
 //#define RtA 		57.324841				//弧度到角度
 //#define AtR    	0.0174533				//度到角度

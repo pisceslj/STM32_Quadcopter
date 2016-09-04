@@ -646,7 +646,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
 I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
-F (..\..\BSP\IMU\IMU.c)(0x57CC0E8A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\卢杰的学习资料都在这里\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\imu.o --omf_browse ..\..\output\imu.crf --depend ..\..\output\imu.d)
+F (..\..\BSP\IMU\IMU.c)(0x57CC1253)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\卢杰的学习资料都在这里\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\imu.o --omf_browse ..\..\output\imu.crf --depend ..\..\output\imu.d)
 I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
@@ -680,7 +680,7 @@ I (..\..\BSP\Usart\usart1.h)(0x569096F1)
 I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
 I (..\..\APP\app.h)(0x56E3DEAD)
 I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
-I (..\..\BSP\IMU\IMU.h)(0x57CC0A22)
+I (..\..\BSP\IMU\IMU.h)(0x57CC0ECB)
 F (..\..\APP\app.c)(0x57CBFCA2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\卢杰的学习资料都在这里\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\app.o --omf_browse ..\..\output\app.crf --depend ..\..\output\app.d)
 I (..\..\User\includes.h)(0x57CAB693)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
