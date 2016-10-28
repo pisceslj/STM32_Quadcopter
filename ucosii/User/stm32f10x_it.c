@@ -150,13 +150,12 @@ void TIM7_IRQHandler(void)
 {
 	if ( TIM_GetITStatus(TIM7 , TIM_IT_Update) != RESET ) 
 	{	
-		time++;
-		if(time==1000){
+		//time++;
+		//if(time==1000){
 		
-			time = 0;
-			dms--;
-			
-		}
+			//time = 0;
+			dms--;	
+		//}
 		TIM_ClearITPendingBit(TIM7 , TIM_FLAG_Update);  		 
 	}		 	
 }

@@ -1,0 +1,948 @@
+Dependencies for Project 'iSO-STM32', Target 'os__stm32': (DO NOT MODIFY !)
+F (..\..\Libraries\CMSIS\startup\startup_stm32f10x_hd.s)(0x57CAB54B)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 518" --pd "STM32F10X_HD SETA 1"--list ..\..\listing\startup_stm32f10x_hd.lst --xref -o ..\..\output\startup_stm32f10x_hd.o --depend ..\..\output\startup_stm32f10x_hd.d)
+F (..\..\Libraries\CMSIS\core_cm3.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\core_cm3.o --omf_browse ..\..\output\core_cm3.crf --depend ..\..\output\core_cm3.d)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+F (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)()
+F (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)()
+F (..\..\Libraries\CMSIS\system_stm32f10x.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\system_stm32f10x.o --omf_browse ..\..\output\system_stm32f10x.crf --depend ..\..\output\system_stm32f10x.d)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)()
+F (..\..\Libraries\FWlib\src\misc.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\misc.o --omf_browse ..\..\output\misc.crf --depend ..\..\output\misc.d)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_adc.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_adc.o --omf_browse ..\..\output\stm32f10x_adc.crf --depend ..\..\output\stm32f10x_adc.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_bkp.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_bkp.o --omf_browse ..\..\output\stm32f10x_bkp.crf --depend ..\..\output\stm32f10x_bkp.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_bkp.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_can.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_can.o --omf_browse ..\..\output\stm32f10x_can.crf --depend ..\..\output\stm32f10x_can.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_can.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_cec.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_cec.o --omf_browse ..\..\output\stm32f10x_cec.crf --depend ..\..\output\stm32f10x_cec.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_cec.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_crc.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_crc.o --omf_browse ..\..\output\stm32f10x_crc.crf --depend ..\..\output\stm32f10x_crc.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_crc.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_dac.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_dac.o --omf_browse ..\..\output\stm32f10x_dac.crf --depend ..\..\output\stm32f10x_dac.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dac.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_dbgmcu.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_dbgmcu.o --omf_browse ..\..\output\stm32f10x_dbgmcu.crf --depend ..\..\output\stm32f10x_dbgmcu.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dbgmcu.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_dma.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_dma.o --omf_browse ..\..\output\stm32f10x_dma.crf --depend ..\..\output\stm32f10x_dma.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_exti.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_exti.o --omf_browse ..\..\output\stm32f10x_exti.crf --depend ..\..\output\stm32f10x_exti.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_flash.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_flash.o --omf_browse ..\..\output\stm32f10x_flash.crf --depend ..\..\output\stm32f10x_flash.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_fsmc.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_fsmc.o --omf_browse ..\..\output\stm32f10x_fsmc.crf --depend ..\..\output\stm32f10x_fsmc.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_gpio.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_gpio.o --omf_browse ..\..\output\stm32f10x_gpio.crf --depend ..\..\output\stm32f10x_gpio.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_i2c.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_i2c.o --omf_browse ..\..\output\stm32f10x_i2c.crf --depend ..\..\output\stm32f10x_i2c.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_iwdg.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_iwdg.o --omf_browse ..\..\output\stm32f10x_iwdg.crf --depend ..\..\output\stm32f10x_iwdg.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_iwdg.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_pwr.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_pwr.o --omf_browse ..\..\output\stm32f10x_pwr.crf --depend ..\..\output\stm32f10x_pwr.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_pwr.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_rcc.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_rcc.o --omf_browse ..\..\output\stm32f10x_rcc.crf --depend ..\..\output\stm32f10x_rcc.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_rtc.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_rtc.o --omf_browse ..\..\output\stm32f10x_rtc.crf --depend ..\..\output\stm32f10x_rtc.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rtc.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_sdio.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_sdio.o --omf_browse ..\..\output\stm32f10x_sdio.crf --depend ..\..\output\stm32f10x_sdio.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_sdio.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_spi.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_spi.o --omf_browse ..\..\output\stm32f10x_spi.crf --depend ..\..\output\stm32f10x_spi.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_spi.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_tim.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_tim.o --omf_browse ..\..\output\stm32f10x_tim.crf --depend ..\..\output\stm32f10x_tim.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_usart.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_usart.o --omf_browse ..\..\output\stm32f10x_usart.crf --depend ..\..\output\stm32f10x_usart.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\Libraries\FWlib\src\stm32f10x_wwdg.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_wwdg.o --omf_browse ..\..\output\stm32f10x_wwdg.crf --depend ..\..\output\stm32f10x_wwdg.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\User\main.c)(0x57CABAFD)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+I (..\..\APP\MainQ.h)(0x56E52703)
+F (..\..\User\stm32f10x_conf.h)(0x56E3D216)()
+F (..\..\User\stm32f10x_it.c)(0x56E3FB01)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_it.o --omf_browse ..\..\output\stm32f10x_it.crf --depend ..\..\output\stm32f10x_it.d)
+I (..\..\User\stm32f10x_it.h)(0x56E3FB04)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\User\stm32f10x_it.h)(0x56E3FB04)()
+F (..\..\Doc\GPIO.txt)(0x536651D8)()
+F (..\..\Doc\IIC.txt)(0x56F5E7E2)()
+F (..\..\Doc\README.md)(0x57CA91CD)()
+F (..\..\Doc\transplant.txt)(0x57CAB572)()
+F (..\..\BSP\BSP.c)(0x57CAB95A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\bsp.o --omf_browse ..\..\output\bsp.crf --depend ..\..\output\bsp.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\BSP\BlueTooth\BlueTooth.c)(0x57CA83F4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\bluetooth.o --omf_browse ..\..\output\bluetooth.crf --depend ..\..\output\bluetooth.d)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (H:\Install\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\BSP\GPS\GPS.c)(0x57CABF87)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\gps.o --omf_browse ..\..\output\gps.crf --depend ..\..\output\gps.d)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+I (H:\Install\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+F (..\..\BSP\I2cdev\I2cdev.c)(0x57CABFB2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\i2cdev.o --omf_browse ..\..\output\i2cdev.crf --depend ..\..\output\i2cdev.d)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\BSP\Motor\motor.c)(0x57CABFB0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\motor.o --omf_browse ..\..\output\motor.crf --depend ..\..\output\motor.d)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\BSP\MPU6050\kalman.c)(0x57CABFC1)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\kalman.o --omf_browse ..\..\output\kalman.crf --depend ..\..\output\kalman.d)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+F (..\..\BSP\MPU6050\MPU6050.c)(0x57C7F079)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\mpu6050.o --omf_browse ..\..\output\mpu6050.crf --depend ..\..\output\mpu6050.d)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\I2cdev\i2cdev.h)(0x56A230A1)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\BSP\Receiver\Rev.c)(0x57C7F168)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\rev.o --omf_browse ..\..\output\rev.crf --depend ..\..\output\rev.d)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\BSP\TIM7\tim7.c)(0x56E40052)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\tim7.o --omf_browse ..\..\output\tim7.crf --depend ..\..\output\tim7.d)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+F (..\..\BSP\Usart\usart1.c)(0x56779C33)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\usart1.o --omf_browse ..\..\output\usart1.crf --depend ..\..\output\usart1.d)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\BSP\HMC5883L\HMC5883L.c)(0x572354C9)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\hmc5883l.o --omf_browse ..\..\output\hmc5883l.crf --depend ..\..\output\hmc5883l.d)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+F (..\..\BSP\bsp_led.c)(0x536651D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\bsp_led.o --omf_browse ..\..\output\bsp_led.crf --depend ..\..\output\bsp_led.d)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+F (..\..\BSP\IMU\IMU.c)(0x57CC1253)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\imu.o --omf_browse ..\..\output\imu.crf --depend ..\..\output\imu.d)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+I (..\..\BSP\IMU\IMU.h)(0x57CC0ECB)
+F (..\..\APP\app.c)(0x57CBFCA2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\app.o --omf_browse ..\..\output\app.crf --depend ..\..\output\app.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\APP\BlueTooth.c)(0x57CBFEF0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\bluetooth_1.o --omf_browse ..\..\output\bluetooth_1.crf --depend ..\..\output\bluetooth_1.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\APP\Pid.c)(0x57CBF7C8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\pid_1.o --omf_browse ..\..\output\pid_1.crf --depend ..\..\output\pid_1.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\APP\Control.c)(0x57CBF8BD)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\control.o --omf_browse ..\..\output\control.crf --depend ..\..\output\control.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\APP\GPS.c)(0x57CBF940)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\gps_1.o --omf_browse ..\..\output\gps_1.crf --depend ..\..\output\gps_1.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\APP\LED.c)(0x57CBF987)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\led.o --omf_browse ..\..\output\led.crf --depend ..\..\output\led.d)
+I (..\..\User\includes.h)(0x57CAB693)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x536651D8)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x536651D8)
+I (H:\Install\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x536651D8)
+I (..\..\User\stm32f10x_conf.h)(0x56E3D216)
+I (..\..\Libraries\FWlib\inc\stm32f10x_exti.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_flash.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x536651D8)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x536651D8)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+I (..\..\BSP\BSP.h)(0x57CAB750)
+I (..\..\BSP\bsp_led.h)(0x536651D8)
+I (..\..\BSP\BlueTooth\BlueTooth.h)(0x56E3C494)
+I (..\..\BSP\GPS\GPS.h)(0x569F2778)
+I (..\..\BSP\I2cdev\I2cdev.h)(0x56A230A1)
+I (..\..\BSP\Motor\motor.h)(0x56766306)
+I (..\..\BSP\MPU6050\kalman.h)(0x56EAB22A)
+I (..\..\BSP\MPU6050\MPU6050.h)(0x56D8260C)
+I (..\..\BSP\HMC5883L\HMC5883L.h)(0x56EAB07A)
+I (H:\Install\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (..\..\BSP\Receiver\Rev.h)(0x56E4D4D7)
+I (..\..\BSP\TIM7\tim7.h)(0x56E3FDA0)
+I (..\..\BSP\Usart\usart1.h)(0x569096F1)
+I (H:\Install\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\APP\app.h)(0x56E3DEAD)
+I (H:\Install\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+F (..\..\ucosII\Source\os_core.c)(0x48893DD0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_core.o --omf_browse ..\..\output\os_core.crf --depend ..\..\output\os_core.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_flag.c)(0x48893FC2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_flag.o --omf_browse ..\..\output\os_flag.crf --depend ..\..\output\os_flag.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_mbox.c)(0x48893FC4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_mbox.o --omf_browse ..\..\output\os_mbox.crf --depend ..\..\output\os_mbox.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_mem.c)(0x48893FC4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_mem.o --omf_browse ..\..\output\os_mem.crf --depend ..\..\output\os_mem.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_mutex.c)(0x48893FC4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_mutex.o --omf_browse ..\..\output\os_mutex.crf --depend ..\..\output\os_mutex.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_q.c)(0x48893FC2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_q.o --omf_browse ..\..\output\os_q.crf --depend ..\..\output\os_q.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_sem.c)(0x48893FC2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_sem.o --omf_browse ..\..\output\os_sem.crf --depend ..\..\output\os_sem.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_task.c)(0x48893FC2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_task.o --omf_browse ..\..\output\os_task.crf --depend ..\..\output\os_task.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_time.c)(0x48893FC4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_time.o --omf_browse ..\..\output\os_time.crf --depend ..\..\output\os_time.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Source\os_tmr.c)(0x48893FC2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_tmr.o --omf_browse ..\..\output\os_tmr.crf --depend ..\..\output\os_tmr.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Ports\os_cpu_c.c)(0x57CA987D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_cpu_c.o --omf_browse ..\..\output\os_cpu_c.crf --depend ..\..\output\os_cpu_c.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Ports\os_dbg.c)(0x56E29486)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\APP -I ..\..\BSP -I ..\..\ucosII\Ports -I ..\..\ucosII\Source -I ..\..\BSP\BlueTooth -I ..\..\BSP\Delay -I ..\..\BSP\GPS -I ..\..\BSP\HMC5883L -I ..\..\BSP\I2cdev -I ..\..\BSP\Motor -I ..\..\BSP\MPU6050 -I ..\..\BSP\MS5611 -I ..\..\BSP\Receiver -I ..\..\BSP\TIM7 -I ..\..\BSP\Usart-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\os_dbg.o --omf_browse ..\..\output\os_dbg.crf --depend ..\..\output\os_dbg.d)
+I (..\..\ucosII\Source\ucos_ii.h)(0x56E52740)
+I (..\..\APP\app_cfg.h)(0x57CAB95A)
+I (..\..\APP\os_cfg.h)(0x56E4B725)
+I (..\..\ucosII\Ports\os_cpu.h)(0x56E2925E)
+F (..\..\ucosII\Ports\os_cpu_a.asm)(0x57CAB18E)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I D:\Source_Of_Lujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE-I H:\Install\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-I H:\Install\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 518" --pd "STM32F10X_HD SETA 1"--list ..\..\listing\os_cpu_a.lst --xref -o ..\..\output\os_cpu_a.o --depend ..\..\output\os_cpu_a.d)

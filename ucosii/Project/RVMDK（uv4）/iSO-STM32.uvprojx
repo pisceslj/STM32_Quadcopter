@@ -332,7 +332,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS;..\..\User;..\..\Libraries\FWlib\inc;..\..\APP;..\..\BSP;..\..\ucosII\Ports;..\..\ucosII\Source;..\..\BSP\BlueTooth;..\..\BSP\Delay;..\..\BSP\GPS;..\..\BSP\HMC5883L;..\..\BSP\I2cdev;..\..\BSP\Motor;..\..\BSP\MPU6050;..\..\BSP\MS5611;..\..\BSP\Receiver;..\..\BSP\TIM7;..\..\BSP\Usart</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS;..\..\User;..\..\Libraries\FWlib\inc;..\..\APP;..\..\BSP;..\..\ucosII\Ports;..\..\ucosII\Source;..\..\BSP\BlueTooth;..\..\BSP\Delay;..\..\BSP\GPS;..\..\BSP\HMC5883L;..\..\BSP\I2cdev;..\..\BSP\Motor;..\..\BSP\MPU6050;..\..\BSP\MS5611;..\..\BSP\Receiver;..\..\BSP\TIM7;..\..\BSP\Usart;..\..\APP\CONTROL;..\..\APP\IMU;..\..\BSP\eeprom</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -413,7 +413,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>FWLIB</GroupName>
+          <GroupName>FWLB</GroupName>
           <Files>
             <File>
               <FileName>misc.c</FileName>
@@ -561,24 +561,9 @@
           <GroupName>DOC</GroupName>
           <Files>
             <File>
-              <FileName>GPIO.txt</FileName>
+              <FileName>readme.txt</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\Doc\GPIO.txt</FilePath>
-            </File>
-            <File>
-              <FileName>IIC.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Doc\IIC.txt</FilePath>
-            </File>
-            <File>
-              <FileName>README.md</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Doc\README.md</FilePath>
-            </File>
-            <File>
-              <FileName>transplant.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Doc\transplant.txt</FilePath>
+              <FilePath>..\..\Doc\readme.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -591,6 +576,11 @@
               <FilePath>..\..\BSP\BSP.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\bsp_led.c</FilePath>
+            </File>
+            <File>
               <FileName>BlueTooth.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\BSP\BlueTooth\BlueTooth.c</FilePath>
@@ -601,24 +591,9 @@
               <FilePath>..\..\BSP\GPS\GPS.c</FilePath>
             </File>
             <File>
-              <FileName>I2cdev.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\BSP\I2cdev\I2cdev.c</FilePath>
-            </File>
-            <File>
               <FileName>motor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\BSP\Motor\motor.c</FilePath>
-            </File>
-            <File>
-              <FileName>kalman.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\BSP\MPU6050\kalman.c</FilePath>
-            </File>
-            <File>
-              <FileName>MPU6050.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\BSP\MPU6050\MPU6050.c</FilePath>
             </File>
             <File>
               <FileName>Rev.c</FileName>
@@ -636,19 +611,29 @@
               <FilePath>..\..\BSP\Usart\usart1.c</FilePath>
             </File>
             <File>
-              <FileName>HMC5883L.c</FileName>
+              <FileName>MPU6050.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\BSP\HMC5883L\HMC5883L.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\BSP\bsp_led.c</FilePath>
+              <FilePath>..\..\BSP\MPU6050\MPU6050.c</FilePath>
             </File>
             <File>
               <FileName>IMU.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\BSP\IMU\IMU.c</FilePath>
+              <FilePath>..\..\BSP\MPU6050\IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>eeprom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\eeprom\eeprom.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\eeprom\flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2cdev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\BSP\I2cdev\I2cdev.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -659,31 +644,6 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\APP\app.c</FilePath>
-            </File>
-            <File>
-              <FileName>BlueTooth.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\APP\BlueTooth.c</FilePath>
-            </File>
-            <File>
-              <FileName>Pid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\APP\Pid.c</FilePath>
-            </File>
-            <File>
-              <FileName>Control.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\APP\Control.c</FilePath>
-            </File>
-            <File>
-              <FileName>GPS.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\APP\GPS.c</FilePath>
-            </File>
-            <File>
-              <FileName>LED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\APP\LED.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -743,7 +703,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>UCOSII/PORTS</GroupName>
+          <GroupName>UCOSII/PROTS</GroupName>
           <Files>
             <File>
               <FileName>os_cpu_c.c</FileName>
@@ -759,6 +719,41 @@
               <FileName>os_cpu_a.asm</FileName>
               <FileType>2</FileType>
               <FilePath>..\..\ucosII\Ports\os_cpu_a.asm</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>APP_BLUETOOTH</GroupName>
+          <Files>
+            <File>
+              <FileName>appBluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\BLUETOOTH\appBluetooth.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>APP_CONTROL</GroupName>
+          <Files>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\CONTROL\control.c</FilePath>
+            </File>
+            <File>
+              <FileName>controlPID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\CONTROL\controlPID.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>APP_IMU</GroupName>
+          <Files>
+            <File>
+              <FileName>APP_IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\APP\IMU\APP_IMU.c</FilePath>
             </File>
           </Files>
         </Group>

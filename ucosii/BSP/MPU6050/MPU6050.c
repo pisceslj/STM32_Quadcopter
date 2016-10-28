@@ -1,127 +1,155 @@
-/***陀螺仪***/
 #include "MPU6050.h"
-#include "kalman.h"
-#include "i2cdev.h"
-#include "usart1.h"
-#include "ucos_ii.h"
+#include "tim7.h"
+#include "includes.h"
 
-/*宏定义------------------------------------------------------------------*/
+u8						mpu6050_buffer[14];					//iic读取后存放数据
+S_INT16_XYZ		GYRO_OFFSET,ACC_OFFSET;			//零漂
+u8						GYRO_OFFSET_OK = 1;
+u8						ACC_OFFSET_OK = 1;
+S_INT16_XYZ		MPU6050_ACC_LAST,MPU6050_GYRO_LAST,GYRO_RADIAN_OLD;		//最新一次读取值与上一次读数
 
-#define	MPU6050_Addr   0xD0	  //定义器件在IIC总线中的从地址,根据ALT  ADDRESS地址引脚不同修改
-// 定义MPU6050内部地址
-//****************************************
-#define	SMPLRT_DIV		0x19	//陀螺仪采样率，典型值：0x07(125Hz)
-#define	CONFIG			0x1A	  //低通滤波频率，典型值：0x06(5Hz)
-#define	GYRO_CONFIG		0x1B	//陀螺仪自检及测量范围，典型值：0x18(不自检，2000deg/s)
-#define	ACCEL_CONFIG	0x1C	//加速计自检测量范围及高通滤波频率，典型值：0x01(不自检，2G，5Hz)
+int debug;
 
-#define INT_PIN_CFG     0x37    //设置旁路有效 打开值：0x42 AUX_DA的辅助I2C
-#define USER_CTRL       0x6A    //用户配置寄存器 打开值：0x40  AUX_DA的辅助I2C
 
-#define	ACCEL_XOUT_H	0x3B
-#define	ACCEL_XOUT_L	0x3C
-#define	ACCEL_YOUT_H	0x3D
-#define	ACCEL_YOUT_L	0x3E
-#define	ACCEL_ZOUT_H	0x3F
-#define	ACCEL_ZOUT_L	0x40
-
-#define	TEMP_OUT_H		0x41
-#define	TEMP_OUT_L		0x42
-
-#define	GYRO_XOUT_H		0x43
-#define	GYRO_XOUT_L		0x44	
-#define	GYRO_YOUT_H		0x45
-#define	GYRO_YOUT_L		0x46
-#define	GYRO_ZOUT_H		0x47
-#define	GYRO_ZOUT_L		0x48
-
-#define	PWR_MGMT_1		0x6B	//电源管理，典型值：0x00(正常启用)
-#define	WHO_AM_I		0x75	  //IIC地址寄存器(默认数值0x68，只读)
-
-u8 TX_DATA[4];  	 //显示据缓存区
-u8 BUF[10];        //接收数据缓存区	
-uint16_t GYRO_XOUT,GYRO_YOUT,GYRO_ZOUT,ACCEL_XOUT,ACCEL_YOUT,ACCEL_ZOUT,MP6050_Temperature;//X,Y,Z轴，温度	
-float Angle_X_Error=0.0f, Angle_Y_Error=0.0f,Angle_Z_Error=0.0f;
-
-void Init_MPU6050(void)
+/**************************实现函数********************************************
+//将iic读取到得数据分拆,放入相应寄存器
+*******************************************************************************/
+void MPU6050_Dataanl(void)
 {
-//int i;
-  I2C_WriteByte(MPU6050_Addr,PWR_MGMT_1, 0x00);	   //解除休眠状态
+
+
+	MPU6050_ACC_LAST.X=((((int16_t)mpu6050_buffer[1]) << 8) | mpu6050_buffer[0])- ACC_OFFSET.X;
+	MPU6050_ACC_LAST.Y=((((int16_t)mpu6050_buffer[3]) << 8) | mpu6050_buffer[2])- ACC_OFFSET.Y;
+	MPU6050_ACC_LAST.Z=((((int16_t)mpu6050_buffer[5]) << 8) | mpu6050_buffer[4])- ACC_OFFSET.Z;
+	//跳过温度ADC
+	MPU6050_GYRO_LAST.X=((((int16_t)mpu6050_buffer[9]) << 8) | mpu6050_buffer[8])-GYRO_OFFSET.X;
+	MPU6050_GYRO_LAST.Y=((((int16_t)mpu6050_buffer[11]) << 8) | mpu6050_buffer[10])-GYRO_OFFSET.Y;
+	MPU6050_GYRO_LAST.Z=((((int16_t)mpu6050_buffer[13]) << 8) | mpu6050_buffer[12])-GYRO_OFFSET.Z;
+
 	
-	
-	I2C_WriteByte(MPU6050_Addr,SMPLRT_DIV, 0x07);    //陀螺仪采样率
-	I2C_WriteByte(MPU6050_Addr,CONFIG, 0x06);        //5Hz 
-	
-	I2C_WriteByte(MPU6050_Addr,INT_PIN_CFG, 0x42);   //使能旁路I2C
-	I2C_WriteByte(MPU6050_Addr,USER_CTRL, 0x40);     //使能旁路I2C
-	
-	I2C_WriteByte(MPU6050_Addr,GYRO_CONFIG, 0x18);   
-	I2C_WriteByte(MPU6050_Addr,ACCEL_CONFIG, 0x01);
-	OSTimeDlyHMSM(0,0,0,200);
-//	for(i=0;i<2000;i++){
-//			READ_MPU6050_Gyro();
-//			READ_MPU6050_Accel();	
-//			
-//			Angle_Calcu();
-//		  
-//			Angle_X_Error += Angle_X_Final;
-//			Angle_Y_Error += Angle_Y_Final;
-//			Angle_Z_Error	+= Angle_Z_Final;
-//		}
-//			Angle_X_Error/=2000;
-//			Angle_Y_Error/=2000;
-//			Angle_Z_Error/=2000;
+
+	if(!GYRO_OFFSET_OK)
+	{
+		static int32_t	tempgx=0,tempgy=0,tempgz=0;
+		static uint16_t cnt_g=0;
+// 		LED1_ON;
+		if(cnt_g==0)
+		{
+			GYRO_OFFSET.X=0;
+			GYRO_OFFSET.Y=0;
+			GYRO_OFFSET.Z=0;
+			tempgx = 0;
+			tempgy = 0;
+			tempgz = 0;
+			cnt_g = 1;
+			return;
+		}
+		tempgx+= MPU6050_GYRO_LAST.X;
+		tempgy+= MPU6050_GYRO_LAST.Y;
+		tempgz+= MPU6050_GYRO_LAST.Z;
+		if(cnt_g==1000)
+		{
+			GYRO_OFFSET.X=tempgx/cnt_g;
+			GYRO_OFFSET.Y=tempgy/cnt_g;
+			GYRO_OFFSET.Z=tempgz/cnt_g;
+			cnt_g = 0;
+			GYRO_OFFSET_OK = 1;
+//			EE_SAVE_GYRO_OFFSET();//保存数据
+			return;
+		}
+		cnt_g++;
+	}
+	if(!ACC_OFFSET_OK)
+	{
+		static int32_t	tempax=0,tempay=0,tempaz=0;
+		static uint16_t cnt_a=0;
+// 		LED1_ON;
+		if(cnt_a==0)
+		{
+			ACC_OFFSET.X = 0;
+			ACC_OFFSET.Y = 0;
+			ACC_OFFSET.Z = 0;
+			tempax = 0;
+			tempay = 0;
+			tempaz = 0;
+			cnt_a = 1;
+			return;
+		}
+		tempax+= MPU6050_ACC_LAST.X;
+		tempay+= MPU6050_ACC_LAST.Y;
+		tempaz+= MPU6050_ACC_LAST.Z;
+		if(cnt_a==1000)
+		{
+			ACC_OFFSET.X=tempax/cnt_a;
+			ACC_OFFSET.Y=tempay/cnt_a;
+			ACC_OFFSET.Z=tempaz/cnt_a-8192;
+			cnt_a = 0;
+			ACC_OFFSET_OK = 1;
+			printf("OK \n");
+			printf("OK \n");
+			debug=1;
+//			EE_SAVE_ACC_OFFSET();//保存数据
+			return;
+		}
+		cnt_a++;		
+	}
 }
 
-//void MPU6050_WHO_AM_I(void)
-//{
-//	u8 dev=0;
-//		if(dev=I2C_ReadByte(MPU6050_Addr,WHO_AM_I),dev==0x68)
-//  { 
-//    	printf("\r设备MP6050识别成功，id=0x%x\r\n\r",dev);
-//  }
-//	else{ printf("\r错误!无法设别设备MP6050，id=0x%x\r\n\r");}
-//}
 
-void READ_MPU6050_Gyro(void)
+/**************************实现函数********************************************
+//将iic读取到得数据分拆,放入相应寄存器,更新MPU6050_Last
+*******************************************************************************/
+void MPU6050_Read(void)
 {
-   BUF[0]=I2C_ReadByte(MPU6050_Addr,GYRO_XOUT_L); 
-   BUF[1]=I2C_ReadByte(MPU6050_Addr,GYRO_XOUT_H);
-   GYRO_XOUT=	(BUF[1]<<8)|BUF[0];
-  // GYRO_XOUT/=16.4; 						   //读取计算X轴数据
-
-   BUF[2]=I2C_ReadByte(MPU6050_Addr,GYRO_YOUT_L);
-   BUF[3]=I2C_ReadByte(MPU6050_Addr,GYRO_YOUT_H);
-   GYRO_YOUT=	(BUF[3]<<8)|BUF[2];
-  // GYRO_YOUT/=16.4; 						   //读取计算Y轴数据
-   BUF[4]=I2C_ReadByte(MPU6050_Addr,GYRO_ZOUT_L);
-   BUF[5]=I2C_ReadByte(MPU6050_Addr,GYRO_ZOUT_H);
-   GYRO_ZOUT=	(BUF[5]<<8)|BUF[4];
-  // GYRO_ZOUT/=16.4; 					       //读取计算Z轴数据
-
+	
+	 mpu6050_buffer[0]=I2C_ReadByte(MPU6050_Addr,ACCEL_XOUT_L);
+	 mpu6050_buffer[1]=I2C_ReadByte(MPU6050_Addr,ACCEL_XOUT_H);
+       //读取计算X轴数据
+	 mpu6050_buffer[2]=I2C_ReadByte(MPU6050_Addr,ACCEL_YOUT_L);
+	 mpu6050_buffer[3]=I2C_ReadByte(MPU6050_Addr,ACCEL_YOUT_H);
+			 //读取计算Y轴数据
+	 mpu6050_buffer[4]=I2C_ReadByte(MPU6050_Addr,ACCEL_ZOUT_L);
+	 mpu6050_buffer[5]=I2C_ReadByte(MPU6050_Addr,ACCEL_ZOUT_H);
+			  //读取计算Z轴数据
+   mpu6050_buffer[6]=I2C_ReadByte(MPU6050_Addr,TEMP_OUT_L); 
+	 mpu6050_buffer[7]=I2C_ReadByte(MPU6050_Addr,TEMP_OUT_H); 
+	
+	 mpu6050_buffer[8]=I2C_ReadByte(MPU6050_Addr,GYRO_XOUT_L); 
+   mpu6050_buffer[9]=I2C_ReadByte(MPU6050_Addr,GYRO_XOUT_H);
+	   //读取计算X轴数据
+   mpu6050_buffer[10]=I2C_ReadByte(MPU6050_Addr,GYRO_YOUT_L);
+   mpu6050_buffer[11]=I2C_ReadByte(MPU6050_Addr,GYRO_YOUT_H);
+   //读取计算Y轴数据
+   mpu6050_buffer[12]=I2C_ReadByte(MPU6050_Addr,GYRO_ZOUT_L);
+   mpu6050_buffer[13]=I2C_ReadByte(MPU6050_Addr,GYRO_ZOUT_H);
+   //读取计算Z轴数据
 }
 
-void READ_MPU6050_Accel(void)
+/**************************实现函数********************************************
+*函数原型:		void MPU6050_initialize(void)
+*功　　能:	    初始化 	MPU6050 以进入可用状态。
+*******************************************************************************/
+void MPU6050_Init(void)
 {
-	BUF[0]=I2C_ReadByte(MPU6050_Addr,ACCEL_XOUT_L); 
-	BUF[1]=I2C_ReadByte(MPU6050_Addr,ACCEL_XOUT_H);
-	ACCEL_XOUT=	(BUF[1]<<8)|BUF[0];
-//	ACCEL_XOUT=(float)((float)ACCEL_XOUT/16384)*100; 		//扩大100倍	       //读取计算X轴数据
-
-	BUF[2]=I2C_ReadByte(MPU6050_Addr,ACCEL_YOUT_L);
-	BUF[3]=I2C_ReadByte(MPU6050_Addr,ACCEL_YOUT_H);
-	ACCEL_YOUT=	(BUF[3]<<8)|BUF[2];
-//	ACCEL_YOUT=(float)((float)ACCEL_YOUT/16384)*100; 						   //读取计算Y轴数据
-   
-	BUF[4]=I2C_ReadByte(MPU6050_Addr,ACCEL_ZOUT_L);
-	BUF[5]=I2C_ReadByte(MPU6050_Addr,ACCEL_ZOUT_H);
-	ACCEL_ZOUT=	(BUF[5]<<8)|BUF[4];
-//	ACCEL_ZOUT=(float)((float)ACCEL_ZOUT/16384)*100; 					       //读取计算Z轴数据
-
+	I2C_WriteByte(MPU6050_Addr,PWR_MGMT_1, 0x00);	//解除休眠状态
 	
-	BUF[6]=I2C_ReadByte(MPU6050_Addr,TEMP_OUT_L); 
-	BUF[7]=I2C_ReadByte(MPU6050_Addr,TEMP_OUT_H); 
-	MP6050_Temperature=(BUF[7]<<8)|BUF[6];
-//	MP6050_Temperature = 35+ ((double) (T_T + 13200)) / 280;// 读取计算出温度
-	MP6050_Temperature = (((float) MP6050_Temperature )/340+36.53)*10 ;//+36.53;  // 读取计算出温度
+	I2C_WriteByte(MPU6050_Addr,SMPLRT_DIV, 0x07);    //陀螺仪采样率125HZ
+	I2C_WriteByte(MPU6050_Addr,CONFIG, 0x03);        //5Hz 
+	
+	I2C_WriteByte(MPU6050_Addr,GYRO_CONFIG, 0x10);   //陀螺仪1000度/S 65.5LSB/g
+	I2C_WriteByte(MPU6050_Addr,ACCEL_CONFIG, 0x08);  //加速度+-4g  8192LSB/g
+
+
+	delay_ms(2000);
+	MPU6050_WHO_AM_I();
+}
+
+void MPU6050_WHO_AM_I(void)
+{
+	u8 dev=0;
+		if(dev=I2C_ReadByte(MPU6050_Addr,WHO_AM_I),dev==0x68)
+  { 
+    	printf("\r设备MP6050识别成功，id=0x%x\r\n\r",dev);
+  }
+	else{ printf("\r错误!无法设别设备\r\n\r");}
 }

@@ -20,10 +20,9 @@
 ..\..\output\app.o: ..\..\BSP\BSP.h
 ..\..\output\app.o: ..\..\BSP\bsp_led.h
 ..\..\output\app.o: ..\..\BSP\BlueTooth\BlueTooth.h
-..\..\output\app.o: ..\..\BSP\GPS\GPS.h
-..\..\output\app.o: ..\..\BSP\I2cdev\I2cdev.h
+..\..\output\app.o: ..\..\BSP\MPU6050\IMU.h
+..\..\output\app.o: ..\..\BSP\I2cdev\i2cdev.h
 ..\..\output\app.o: ..\..\BSP\Motor\motor.h
-..\..\output\app.o: ..\..\BSP\MPU6050\kalman.h
 ..\..\output\app.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\app.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\app.o: ..\..\User\includes.h
@@ -32,5 +31,8 @@
 ..\..\output\app.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\app.o: ..\..\BSP\Usart\usart1.h
 ..\..\output\app.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\app.o: ..\..\APP\CONTROL\control.h
+..\..\output\app.o: ..\..\BSP\eeprom\eeprom.h
+..\..\output\app.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\app.o: ..\..\APP\app.h
 ..\..\output\app.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h

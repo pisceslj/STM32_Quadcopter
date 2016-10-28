@@ -1,30 +1,37 @@
-#include "BlueTooth.h" 	 
+#include "BlueTooth.h" 	
+#include "control.h"
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "ucos_ii.h"
-
-#define USART3_REC_LEN  	  200 
+#define USART3_REC_LEN  			200 
 #define USART3_TX_LEN  			200 
+
+extern float psp,psd,psi,pcp,pcd;
+extern float rsp,rsd,rsi,rcp,rcd;
+extern float ysp,ysd,ysi,ycp,ycd;
 
 //串口3中断服务程序
 //注意,读取USARTx->SR能避免莫名其妙的错误   
 u8 USART3_RX_BUF[USART3_REC_LEN]={0};     //接收缓冲,最大USART_REC_LEN个字节.
 u8 USART3_TX_BUF[USART3_TX_LEN]={0};
-
 //接收状态
 //bit15，	接收完成标志
 //bit14，	接收到0x0d
 //bit13~0，	接收到的有效字节数目
 u16 USART3_RX_STA=0;       //接收状态标记	
+u8 Res;//字节接收
 
+//信息解码
+u8 ARMED,pidset,send_angle;
+//PID设置缓冲
+PID P;
 
-u8 Res;
-//消息队列
-extern OS_EVENT * MainQ;
-extern void *QMessageMain[QSIZE];
-extern INT8U errMainQ;
-
+void BT_Send(S_FLOAT_XYZ   *angleTX)
+{
+	printf("pitch %f;roll %f;yaw %f\n",angleTX->Y,angleTX->X,angleTX->Z);
+}
 
 void BLUETOOTH_GPIO_Config(void)
 {
@@ -60,7 +67,8 @@ void BLUETOOTH_GPIO_Config(void)
 	USART_Cmd(USART3, ENABLE);//使能串口
 }
 
-void USART3_NVIC_Config(void){
+void USART3_NVIC_Config(void)
+{
 	NVIC_InitTypeDef NVIC_InitStructure;
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);//设置中断优先级
 	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
@@ -81,42 +89,61 @@ void USART3_IRQHandler(void)
 		
 		if((USART3_RX_STA&0X8000)==0)//接收未完成
 			{
-				if(Res=='#')
-				{
-				   USART3_RX_STA|=0X8000;
-				   Command_Read();
-				}
+				if(Res=='#'){USART3_RX_STA|=0X8000;Command_Read();}
 				else
-				{
+					{
 					USART3_RX_BUF[USART3_RX_STA++]=Res;
-					if(USART3_RX_STA>(USART3_REC_LEN-1))	//接收数据错误,重新开始接收	
-             {
-						     USART3_RX_STA=0;
-						 }  
-				}		 
+					if(USART3_RX_STA>(USART3_REC_LEN-1)){USART3_RX_STA=0;}//接收数据错误,重新开始接收	  
+					}		 
 			}   		 
 		}
 		OSIntExit();		
 }
 
 void Command_Read()
- {
+{
+	char *p,*q,*m,*n;
 	if(USART3_RX_STA&0x8000)
 		{
-       if(strcmp((const char*)USART3_RX_BUF,"Yes")==0)u3_printf("copy");
-			 if(strcmp((const char*)USART3_RX_BUF,"No")==0)u3_printf("ok");
-		}
-		u3_printf("\r\n");
-		//发送消息@@@ 实际上要建立一个数组
-		OSQPost(MainQ,(void*)USART3_RX_BUF);
-		
-		USART3_RX_STA=0;
-		RX_BUF_Clear();
+       /*if(strcmp((const char*)USART3_RX_BUF,"Yes")==0)
+				 u3_printf("copy");
+			 else if(strcmp((const char*)USART3_RX_BUF,"STOP")==0)
+			 {
+			 		ARMED=0;
+				  u3_printf("Stop Motor");
+			 }
+			 else if(strcmp((const char*)USART3_RX_BUF,"START")==0)
+			 {
+					ARMED=1;
+				  u3_printf("Start Motor");
+			 }
+			 else if(strcmp((const char*)USART3_RX_BUF,"ANGLE")==0)
+			 {
+					send_angle=1;
+			 }
+			 else 
+			 {
+				u3_printf("undef info");
+			 }*/
+			ARMED = 1;
+			
+			memcpy(p,(const char*)USART3_RX_BUF,4);
+			psp = atof(p);
+			u3_printf("%f",psp);
+			
+			strmid(q,(const char*)USART3_RX_BUF,4,5);
+			psd = atof(q);
+			u3_printf("%f",psd);
+			
+			u3_printf("\r\n");
+			USART3_RX_STA=0;
+			RX_BUF_Clear();
 	}
+	
+	
+}
 
-
-void RX_BUF_Clear()
-{
+void RX_BUF_Clear(){
 	int i;
 	for(i=0;i<USART3_REC_LEN;i++){USART3_RX_BUF[i]=0;}
 }
@@ -134,6 +161,20 @@ void u3_printf(char* fmt,...)
 	  while(USART_GetFlagStatus(USART3,USART_FLAG_TC)==RESET); //循环发送,直到发送完毕   
 		USART_SendData(USART3,USART3_TX_BUF[j]); 
 	} 
+}
+
+char * strmid(char *dst,const char *src, int n,int m) 
+{
+    const char *p = src;
+    char *q = dst;
+    int len = strlen(src);
+    if(n>len) n = len-m;    
+    if(m<0) m=0;    
+    if(m>len) return NULL;
+    p += m;
+    while(n--) *(q++) = *(p++);
+    *(q++)='\0';
+    return dst;
 }
 
 

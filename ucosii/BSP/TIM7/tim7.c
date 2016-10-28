@@ -24,7 +24,7 @@ void tim7_init()
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM7 , ENABLE);
 	NVIC_TIM7.NVIC_IRQChannel = TIM7_IRQn;                     
   NVIC_TIM7.NVIC_IRQChannelPreemptionPriority = 0;
-  NVIC_TIM7.NVIC_IRQChannelSubPriority = 1;
+  NVIC_TIM7.NVIC_IRQChannelSubPriority = 0;
   NVIC_TIM7.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_TIM7);
 	

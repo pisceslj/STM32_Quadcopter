@@ -322,21 +322,20 @@ void  OSTimeTickHook (void)
 * Note(s)    : 1) This function MUST be placed on entry 15 of the Cortex-M3 vector table.
 *********************************************************************************************************
 */
-#if 0
-void  OS_CPU_SysTickHandler (void)
-{
-    OS_CPU_SR  cpu_sr;
+
+//void  OS_CPU_SysTickHandler (void)
+//{
+//    OS_CPU_SR  cpu_sr;
 
 
-    OS_ENTER_CRITICAL();                         /* Tell uC/OS-II that we are starting an ISR          */
-    OSIntNesting++;
-    OS_EXIT_CRITICAL();
+//    OS_ENTER_CRITICAL();                         /* Tell uC/OS-II that we are starting an ISR          */
+//    OSIntNesting++;
+//    OS_EXIT_CRITICAL();
 
-    OSTimeTick();                                /* Call uC/OS-II's OSTimeTick()                       */
+//    OSTimeTick();                                /* Call uC/OS-II's OSTimeTick()                       */
 
-    OSIntExit();                                 /* Tell uC/OS-II that we are leaving the ISR          */
-}
-#endif
+//    OSIntExit();                                 /* Tell uC/OS-II that we are leaving the ISR          */
+//}
 
 /*
 *********************************************************************************************************

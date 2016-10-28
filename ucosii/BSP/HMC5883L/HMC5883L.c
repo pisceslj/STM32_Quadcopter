@@ -1,4 +1,3 @@
-/***磁力计***/
 #include "HMC5883L.h"
 /*宏定义------------------------------------------------------------------*/
 #define ABS(x) ((x)>=0?(x):(-(x)))
@@ -78,7 +77,7 @@ void Identify_HMC5883L(void)
 */
 void Init_HMC5883L(void)//读取
 {
-	 int i=0;
+	// int i=0;
 	I2C_WriteByte(HMC5883L_Addr,HMC5883L_ConfigurationRegisterA,0x14);   //配置寄存器A：采样平均数1 输出速率30Hz 正常测量
 	I2C_WriteByte(HMC5883L_Addr,HMC5883L_ConfigurationRegisterB,0x20);   //配置寄存器B：增益控制
 	I2C_WriteByte(HMC5883L_Addr,HMC5883L_ModeRegister,0x00);   //模式寄存器：连续测量模式

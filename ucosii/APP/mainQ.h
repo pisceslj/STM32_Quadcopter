@@ -3,11 +3,9 @@
 #include "ucos_ii.h"
 
 /******************消息队列*******************************/
-//发向主任务
 
 
-
-
+//角度信息
 OS_EVENT * MainQ;
 void *QMessageMain[QSIZE];
 INT8U errMainQ;
@@ -17,9 +15,5 @@ OS_EVENT * PIDQ;
 void *QMessagePID[QSIZE];
 INT8U errPIDQ;
 
-//发向通信线程 ->上位机
-OS_EVENT * PCQ;
-void *QMessagePC[QSIZE];
-INT8U errPCQ;
 
 #endif

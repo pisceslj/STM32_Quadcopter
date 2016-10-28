@@ -33,6 +33,7 @@ void delay_nop(void)
 {
   unsigned int i=10; //i=10延时1.5us//这里可以优化速度 ，经测试最低到5还能写入
    while(i--);
+
 }
 
 /************************************************************   
@@ -130,7 +131,7 @@ unsigned char iic_readx(void)
    //SCL=0;
     GPIO_ResetBits(GPIOB, SCL);
     delay_nop(); 
-	//SDA=1;
+ //SDA=1;
  GPIO_SetBits(GPIOB,SDA);
 
  iic_SDA_Set_Dir(1);
@@ -310,7 +311,7 @@ void I2C_Read_MultiBytes(unsigned char DeviceAddr,unsigned char address,unsigned
 */
 uint16_t I2C_Read_2Bytes(unsigned char DeviceAddr,unsigned char address)
 {
-   unsigned char data_temp1,data_temp2;
+   unsigned char i,data_temp1,data_temp2;
 	 uint16_t data16;
    iic_start();
    iic_writex(DeviceAddr);
@@ -342,7 +343,7 @@ uint16_t I2C_Read_2Bytes(unsigned char DeviceAddr,unsigned char address)
 */
 uint32_t I2C_Read_3Bytes(unsigned char DeviceAddr,unsigned char address)
 {
-   unsigned char data_temp1,data_temp2,data_temp3;
+   unsigned char i,data_temp1,data_temp2,data_temp3;
 	 uint32_t data32;
    iic_start();
    iic_writex(DeviceAddr);

@@ -23,7 +23,7 @@
 #ifndef   OS_uCOS_II_H
 #define   OS_uCOS_II_H
 
-#define QSIZE 10
+#define QSIZE 2
 
 #ifdef __cplusplus
 extern "C" {

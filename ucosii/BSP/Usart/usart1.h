@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 void USART1_Config(void);
+void USART1_NVIC_Config(void);
 int fputc(int ch, FILE *f);
 void USART1_IRQHandler(void);
 

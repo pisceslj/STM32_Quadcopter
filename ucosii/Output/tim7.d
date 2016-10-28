@@ -15,3 +15,4 @@
 ..\..\output\tim7.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\tim7.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\tim7.o: ..\..\BSP\BlueTooth\BlueTooth.h
+..\..\output\tim7.o: ..\..\BSP\MPU6050\IMU.h

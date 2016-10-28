@@ -1,5 +1,5 @@
 #include "Rev.h"
-
+RC_GETDATA Rc_Get;
 u8 TIM2CH1_CAPTURE_STA = 0;	//通道1输入捕获标志，高两位做捕获标志，低6位做溢出标志		
 u16 TIM2CH1_CAPTURE_UPVAL;
 u16 TIM2CH1_CAPTURE_DOWNVAL;
@@ -27,8 +27,8 @@ u32 tim2_T4;
 
 int pwmout1, pwmout2, pwmout3, pwmout4; 				//输出占空比
 
-void Rev_GPIO_init()
-{
+
+void Rev_GPIO_init(){
 	GPIO_InitTypeDef GPIO_tim;
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_AFIO, ENABLE);
@@ -39,8 +39,7 @@ void Rev_GPIO_init()
 	GPIO_ResetBits(GPIOA, GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3); //下拉
 }
 
-void Rev_NVIC_TIM_init()
-{
+void Rev_NVIC_TIM_init(){
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
 	TIM_ICInitTypeDef TIM2_ICInitStructure;
 	NVIC_InitTypeDef  NVIC_TIM2;
@@ -93,16 +92,18 @@ void Rev_NVIC_TIM_init()
 	TIM_ITConfig(TIM2, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4,
 			ENABLE);   //不允许更新中断，允许CC1IE,CC2IE,CC3IE,CC4IE捕获中断	
 
-	TIM_Cmd(TIM2, ENABLE); 		//使能定时器2
+	TIM_Cmd(TIM2, ENABLE); 		//bu使能定时器2
 	
 }
 
 
 void TIM2_IRQHandler(void)
 {
+	
 		OSIntEnter();
 
-	if ((TIM2CH1_CAPTURE_STA & 0X80) == 0) 		//还未成功捕获	
+
+if ((TIM2CH1_CAPTURE_STA & 0X80) == 0) 		//还未成功捕获	
 	{
 		if (TIM_GetITStatus(TIM2, TIM_IT_CC1) != RESET) 		//捕获1发生捕获事件
 		{
