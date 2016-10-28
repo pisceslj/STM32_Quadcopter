@@ -420,11 +420,11 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=..\..\output\os_cpu_a.d -o..\..\output\os_cpu_a.o -ID:\Source_Of_L
-ujie\嵌入式综合课程设计\最新的ucosii\ucosii\Project\RVMDK（uv4）\RTE -IH:\Insta
-ll\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include -IH:\Install\ARM\CMSIS\Incl
-ude --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 518" --
-predefine="STM32F10X_HD SETA 1" --list=..\..\listing\os_cpu_a.lst ..\..\ucosII\
-Ports\os_cpu_a.asm
+ujie\嵌入式综合课程设计\ucos2移植\ucosii\Project\RVMDK（uv4）\RTE -IH:\Install\
+ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include -IH:\Install\ARM\CMSIS\Include
+ --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 518" --pre
+define="STM32F10X_HD SETA 1" --list=..\..\listing\os_cpu_a.lst ..\..\ucosII\Por
+ts\os_cpu_a.asm
 
 
 

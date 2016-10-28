@@ -8,4 +8,6 @@ void Identify_HMC5883L(void);
 void Read_HMC5883L(void);//∂¡»°
 void HMC5883L_Self_Test(void);//∂¡»°
 void Init_HMC5883L(void);
+
 #endif
+

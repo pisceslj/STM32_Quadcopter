@@ -51,7 +51,7 @@ void Prepare_Data(void)
 void Get_Attitude(void)
 {
 	float x,y,z,Gyro_x,Gyro_y,Gyro_z;
-  static int q=0,i=0;
+  //static int q=0;//,i=0
 	x=ACC_AVG.X/8192;
 	y=ACC_AVG.Y/8192;
 	z=ACC_AVG.Z/8192;
