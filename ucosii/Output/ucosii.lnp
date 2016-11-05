@@ -40,6 +40,7 @@
 "..\..\output\eeprom.o"
 "..\..\output\flash.o"
 "..\..\output\i2cdev.o"
+"..\..\output\hmc5883l.o"
 "..\..\output\app.o"
 "..\..\output\os_core.o"
 "..\..\output\os_flag.o"

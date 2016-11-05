@@ -11,5 +11,5 @@ extern S_FLOAT_XYZ GYRO_I;				//ÍÓÂÝÒÇ»ý·Ö
 void Prepare_Data(void);
 void Get_Attitude(void);
 void IMUupdate(float gx, float gy, float gz, float ax, float ay, float az);
-
+void AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz) ;
 #endif

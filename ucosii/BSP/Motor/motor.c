@@ -45,10 +45,10 @@ void Motor_TIM_init(){
 	TIM_TimeBaseInitTypeDef TIM_tb4;
 	TIM_OCInitTypeDef TIM_oc4;
 
-	u16 CCR1_Val = 800; 	//设置初始化电平为0.8ms
-	u16 CCR2_Val = 800;
-	u16 CCR3_Val = 800;
-	u16 CCR4_Val = 800;
+	u16 CCR1_Val = 20; 	//设置初始化高电平为2ms
+	u16 CCR2_Val = 20;
+	u16 CCR3_Val = 20;
+	u16 CCR4_Val = 20;
 	
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);//开启定时器4的时钟
 	

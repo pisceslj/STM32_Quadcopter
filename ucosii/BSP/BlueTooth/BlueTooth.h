@@ -8,5 +8,4 @@ void USART3_IRQHandler(void);
 void Command_Read(void);
 void RX_BUF_Clear(void);
 void BT_Send(S_FLOAT_XYZ* angleTX);
-char * strmid(char *dst,const char *src, int n,int m); 
 #endif

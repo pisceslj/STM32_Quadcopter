@@ -8,6 +8,8 @@ u8						GYRO_OFFSET_OK = 1;
 u8						ACC_OFFSET_OK = 1;
 S_INT16_XYZ		MPU6050_ACC_LAST,MPU6050_GYRO_LAST,GYRO_RADIAN_OLD;		//最新一次读取值与上一次读数
 
+
+
 int debug;
 
 
@@ -47,7 +49,7 @@ void MPU6050_Dataanl(void)
 		tempgx+= MPU6050_GYRO_LAST.X;
 		tempgy+= MPU6050_GYRO_LAST.Y;
 		tempgz+= MPU6050_GYRO_LAST.Z;
-		if(cnt_g==1000)
+		if(cnt_g==800)
 		{
 			GYRO_OFFSET.X=tempgx/cnt_g;
 			GYRO_OFFSET.Y=tempgy/cnt_g;
@@ -78,16 +80,14 @@ void MPU6050_Dataanl(void)
 		tempax+= MPU6050_ACC_LAST.X;
 		tempay+= MPU6050_ACC_LAST.Y;
 		tempaz+= MPU6050_ACC_LAST.Z;
-		if(cnt_a==1000)
+		if(cnt_a==800)
 		{
 			ACC_OFFSET.X=tempax/cnt_a;
 			ACC_OFFSET.Y=tempay/cnt_a;
 			ACC_OFFSET.Z=tempaz/cnt_a-8192;
 			cnt_a = 0;
 			ACC_OFFSET_OK = 1;
-			printf("OK \n");
-			printf("OK \n");
-			debug=1;
+			
 //			EE_SAVE_ACC_OFFSET();//保存数据
 			return;
 		}
@@ -131,17 +131,31 @@ void MPU6050_Read(void)
 *******************************************************************************/
 void MPU6050_Init(void)
 {
+	int i=0; //初始化时读取直至稳定 1000
+	
 	I2C_WriteByte(MPU6050_Addr,PWR_MGMT_1, 0x00);	//解除休眠状态
 	
 	I2C_WriteByte(MPU6050_Addr,SMPLRT_DIV, 0x07);    //陀螺仪采样率125HZ
-	I2C_WriteByte(MPU6050_Addr,CONFIG, 0x03);        //5Hz 
+	I2C_WriteByte(MPU6050_Addr,CONFIG, 0x06);        //5Hz 
 	
+		delay_ms(10);
+	I2C_WriteByte(MPU6050_Addr,INT_PIN_CFG, 0x42);   //使能旁路I2C
+	I2C_WriteByte(MPU6050_Addr,USER_CTRL, 0x40);     //使能旁路I2C
+		delay_ms(10);
 	I2C_WriteByte(MPU6050_Addr,GYRO_CONFIG, 0x10);   //陀螺仪1000度/S 65.5LSB/g
 	I2C_WriteByte(MPU6050_Addr,ACCEL_CONFIG, 0x08);  //加速度+-4g  8192LSB/g
 
 
 	delay_ms(2000);
 	MPU6050_WHO_AM_I();
+	
+	
+	while(i<1000)
+	{
+	 MPU6050_Read();
+		i++;
+	}
+	
 }
 
 void MPU6050_WHO_AM_I(void)
@@ -153,4 +167,3 @@ void MPU6050_WHO_AM_I(void)
   }
 	else{ printf("\r错误!无法设别设备\r\n\r");}
 }
-

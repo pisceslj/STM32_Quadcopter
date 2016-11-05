@@ -31,7 +31,7 @@ void USART1_Config(void)
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	  
 		/* 串口1工作模式（USART1 mode）配置 */
-	USART_InitStructure.USART_BaudRate = 9600;//一般设置为9600;
+	USART_InitStructure.USART_BaudRate = 115200;//一般设置为115200;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
 	USART_InitStructure.USART_Parity = USART_Parity_No ;
@@ -89,10 +89,16 @@ void USART1_IRQHandler(void)
 		if((USART_RX_STA&0x8000)==0)//接收未完成
 			{
 			if(USART_RX_STA&0x4000)//接收到了0x0d
-				{
+			{
 				if(Res1!=0x0a)USART_RX_STA=0;//接收错误,重新开始
-				else USART_RX_STA|=0x8000;	//接收完成了 
+				else
+				{
+					USART_RX_STA|=0x8000;	//接收完成了 
+				
+					
+					
 				}
+			}
 			else //还没收到0X0D
 				{	
 				if(Res1==0x0d)USART_RX_STA|=0x4000;
@@ -107,4 +113,3 @@ void USART1_IRQHandler(void)
 		}
 	OSIntExit();	
 }
-

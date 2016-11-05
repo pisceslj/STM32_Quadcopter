@@ -1,0 +1,73 @@
+		 else if(USART3_RX_BUF[0]==0x70)//小写字母p 进行PID调节
+			 {
+				 P.shell_P=0;
+				 P.shell_I=0;
+				 P.shell_D=0;
+				 P.core_P=0;
+				 P.core_I=0;
+				 P.core_D=0;
+				 /*指令格式
+				 数字代表PID系数，先外环后内环  '+' 0x2b 
+						pp1+2+3+1+2+3
+						pr1+2+3+1+2+3    
+					  py1+2+3+1+2+3
+				 */
+				 if(USART3_RX_BUF[1]==0x70)// pitch 70
+				 {
+						while(USART3_RX_BUF[i]!=0x2b)
+						{
+							P.shell_P=P.shell_P*10+USART3_RX_BUF[i]-0x30;
+							i++;
+						}
+						i++;
+						
+						while(USART3_RX_BUF[i]!=0x2b)
+						{
+							P.shell_I=P.shell_I*10+USART3_RX_BUF[i]-0x30;
+							i++;
+						}
+						i++;
+						
+						while(USART3_RX_BUF[i]!=0x2b)
+						{
+							P.shell_D=P.shell_D*10+USART3_RX_BUF[i]-0x30;
+							i++;
+						}
+						i++;
+						
+						while(USART3_RX_BUF[i]!=0x2b)
+						{
+							P.core_P=P.core_P*10+USART3_RX_BUF[i]-0x30;
+							i++;
+						}
+						i++;
+						while(USART3_RX_BUF[i]!=0x2b)
+						{
+							P.core_I=P.core_I*10+USART3_RX_BUF[i]-0x30;
+							i++;
+						}
+						i++;
+						while(USART3_RX_BUF[i]!=0)
+						{
+							P.core_D=P.core_D*10+USART3_RX_BUF[i]-0x30;
+							i++;
+						}
+						
+						pidset=1;
+				 }
+				 else if(USART3_RX_BUF[1]==0x72)	//roll 72
+				 {
+					
+				 }
+				 else if(USART3_RX_BUF[1]==0x79)  //yaw 79
+				 {
+				
+				 }
+			 }
+			 else if(strcmp((const char*)USART3_RX_BUF,"ANGLE")==0)
+							{send_angle=1;}
+			 else 
+			 {
+				u3_printf("undef info");
+			 }
+		}

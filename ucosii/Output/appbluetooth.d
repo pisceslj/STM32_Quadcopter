@@ -2,7 +2,7 @@
 ..\..\output\appbluetooth.o: ..\..\User\includes.h
 ..\..\output\appbluetooth.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\appbluetooth.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\appbluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\appbluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\appbluetooth.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\appbluetooth.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\appbluetooth.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -26,13 +26,13 @@
 ..\..\output\appbluetooth.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\appbluetooth.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\appbluetooth.o: ..\..\User\includes.h
-..\..\output\appbluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
+..\..\output\appbluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\appbluetooth.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\appbluetooth.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\appbluetooth.o: ..\..\BSP\Usart\usart1.h
-..\..\output\appbluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\appbluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\appbluetooth.o: ..\..\APP\CONTROL\control.h
 ..\..\output\appbluetooth.o: ..\..\BSP\eeprom\eeprom.h
 ..\..\output\appbluetooth.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\appbluetooth.o: ..\..\APP\app.h
-..\..\output\appbluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\appbluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h

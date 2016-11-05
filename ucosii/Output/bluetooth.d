@@ -3,7 +3,7 @@
 ..\..\output\bluetooth.o: ..\..\BSP\MPU6050\IMU.h
 ..\..\output\bluetooth.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\bluetooth.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\bluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\bluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\bluetooth.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\bluetooth.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\bluetooth.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -15,10 +15,9 @@
 ..\..\output\bluetooth.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 ..\..\output\bluetooth.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\bluetooth.o: ..\..\APP\CONTROL\control.h
-..\..\output\bluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h
-..\..\output\bluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
-..\..\output\bluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\string.h
-..\..\output\bluetooth.o: H:\Install\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\bluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\bluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\bluetooth.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 ..\..\output\bluetooth.o: ..\..\ucosII\Source\ucos_ii.h
 ..\..\output\bluetooth.o: ..\..\APP\app_cfg.h
 ..\..\output\bluetooth.o: ..\..\APP\os_cfg.h

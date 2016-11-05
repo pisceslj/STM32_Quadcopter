@@ -220,4 +220,3 @@ if ((TIM2CH1_CAPTURE_STA & 0X80) == 0) 		//还未成功捕获
 	}
 	OSIntExit();
 }
-

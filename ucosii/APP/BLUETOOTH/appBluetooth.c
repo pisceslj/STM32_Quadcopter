@@ -4,7 +4,7 @@
 // 优先级5
 extern OS_EVENT * ANGLE;  //信号量
 extern INT8U errANGLE;
-extern int debug;
+
 S_FLOAT_XYZ   *angleTX=&Q_ANGLE;
 extern u8 ARMED,pidset,send_angle;
 void Task_BlueTooth(void*p_arg)
@@ -14,7 +14,7 @@ void Task_BlueTooth(void*p_arg)
 	
 	while(1)
 	{
-		if(debug==1) //&& send_angle==1
+		if(ARMED==1 && send_angle==1)
 		{
 			//加个信号量
 			OSMutexPend (ANGLE,0, &errANGLE);
@@ -26,8 +26,6 @@ void Task_BlueTooth(void*p_arg)
 		 pidset=0;
 		}
 		//BT_Send(angleTX);
-		OSTimeDlyHMSM(0,0,1,0);
+		OSTimeDlyHMSM(0,0,0,100);
 	}
 }
-
-

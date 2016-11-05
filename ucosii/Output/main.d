@@ -2,7 +2,7 @@
 ..\..\output\main.o: ..\..\User\includes.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\main.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\main.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\main.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -26,13 +26,13 @@
 ..\..\output\main.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\main.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\main.o: ..\..\User\includes.h
-..\..\output\main.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
+..\..\output\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\main.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\main.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\main.o: ..\..\BSP\Usart\usart1.h
-..\..\output\main.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\main.o: ..\..\APP\CONTROL\control.h
 ..\..\output\main.o: ..\..\BSP\eeprom\eeprom.h
 ..\..\output\main.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\main.o: ..\..\APP\app.h
-..\..\output\main.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
