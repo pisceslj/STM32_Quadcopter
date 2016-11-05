@@ -28,7 +28,7 @@ u8 ARMED,pidset,send_angle;
 //PID设置缓冲
 PID P;
 
-void BT_Send(S_FLOAT_XYZ   *angleTX)
+void BT_Send(S_FLOAT_XYZ *angleTX)
 {
 	printf("pitch %f;roll %f;yaw %f\n",angleTX->Y,angleTX->X,angleTX->Z);
 }
@@ -38,22 +38,24 @@ void BLUETOOTH_GPIO_Config(void)
 	GPIO_InitTypeDef GPIO_InitStructure;
 	USART_InitTypeDef USART_InitStructure;
 	
-		/* 配置串口3 （USART3） 时钟*/
+	/* 配置串口3 （USART3） 时钟*/
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_AFIO, ENABLE);
 	GPIO_PinRemapConfig(GPIO_FullRemap_USART3 ,ENABLE); 
+	
 	/*串口GPIO端口配置*/
   /* 配置串口3 （USART3 Tx (PD8)）*/
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOD, &GPIO_InitStructure);    
+	GPIO_Init(GPIOD, &GPIO_InitStructure);   
+	
 	/* 配置串口3 USART3 Rx (PD9)*/
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
 	  
-		/* 串口3工作模式（USART3 mode）配置 */
+	/* 串口3工作模式（USART3 mode）配置 */
 	USART_InitStructure.USART_BaudRate = 9600;//一般设置为9600;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
@@ -84,17 +86,24 @@ void USART3_IRQHandler(void)
 	OSIntEnter();
 	
 	if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x23结尾)
-		{
+	{
 		Res =USART_ReceiveData(USART3);//(USART3->DR);	//读取接收到的数据
 		
 		if((USART3_RX_STA&0X8000)==0)//接收未完成
-			{
-				if(Res=='#'){USART3_RX_STA|=0X8000;Command_Read();}
+		{
+				if(Res=='#')
+				{
+					USART3_RX_STA|=0X8000;
+					Command_Read();
+				}
 				else
-					{
+				{
 					USART3_RX_BUF[USART3_RX_STA++]=Res;
-					if(USART3_RX_STA>(USART3_REC_LEN-1)){USART3_RX_STA=0;}//接收数据错误,重新开始接收	  
-					}		 
+					if(USART3_RX_STA>(USART3_REC_LEN-1))
+					{
+						USART3_RX_STA=0;
+					}//接收数据错误,重新开始接收	  
+				}		 
 			}   		 
 		}
 		OSIntExit();		
@@ -102,7 +111,9 @@ void USART3_IRQHandler(void)
 
 void Command_Read()
 {
-	char *p,*q,*m,*n;
+	char *p,*q;
+	char *endptr;
+	float temp;
 	if(USART3_RX_STA&0x8000)
 		{
        /*if(strcmp((const char*)USART3_RX_BUF,"Yes")==0)
@@ -121,19 +132,29 @@ void Command_Read()
 			 {
 					send_angle=1;
 			 }
-			 else 
-			 {
-				u3_printf("undef info");
-			 }*/
-			ARMED = 1;
+			 */
+			ARMED=1;
 			
-			memcpy(p,(const char*)USART3_RX_BUF,4);
-			psp = atof(p);
-			u3_printf("%f",psp);
+			temp = strtod((const char*)USART3_RX_BUF,&endptr);
 			
-			strmid(q,(const char*)USART3_RX_BUF,4,5);
-			psd = atof(q);
-			u3_printf("%f",psd);
+			if(strcmp(endptr,"psp")== 0){psp = temp;u3_printf(" psp changed to%lf",psp);}
+			else if(strcmp(endptr,"psd")== 0){psd = temp;u3_printf(" psd changed to%lf",psd);}
+			else if(strcmp(endptr,"psi")== 0){psi = temp;u3_printf(" psi changed to%lf",psi);}
+			else if(strcmp(endptr,"pcp")== 0){pcp = temp;u3_printf(" pcp changed to%lf",pcp);}
+			else if(strcmp(endptr,"pcd")== 0){pcd = temp;u3_printf(" pcd changed to%lf",pcd);}
+			
+			else if(strcmp(endptr,"rsp")== 0){rsp = temp;u3_printf(" rsp changed to%lf",rsp);}
+			else if(strcmp(endptr,"rsd")== 0){rsd = temp;u3_printf(" rsd changed to%lf",rsd);}
+			else if(strcmp(endptr,"rsi")== 0){rsi = temp;u3_printf(" rsi changed to%lf",rsi);}
+			else if(strcmp(endptr,"rcp")== 0){rcp = temp;u3_printf(" rcp changed to%lf",rcp);}
+			else if(strcmp(endptr,"rcd")== 0){rcd = temp;u3_printf(" rcd changed to%lf",rcd);}
+			
+			else if(strcmp(endptr,"ysp")== 0){ysp = temp;u3_printf(" ysp changed to%lf",ysp);}
+			else if(strcmp(endptr,"ysd")== 0){ysd = temp;u3_printf(" ysd changed to%lf",ysd);}
+			else if(strcmp(endptr,"ysi")== 0){ysi = temp;u3_printf(" ysi changed to%lf",ysi);}
+			else if(strcmp(endptr,"ycp")== 0){ycp = temp;u3_printf(" ycp changed to%lf",ycp);}
+			else if(strcmp(endptr,"ycd")== 0){ycd = temp;u3_printf(" ycd changed to%lf",ycd);}
+			else {u3_printf("undef info");}
 			
 			u3_printf("\r\n");
 			USART3_RX_STA=0;
@@ -143,9 +164,13 @@ void Command_Read()
 	
 }
 
-void RX_BUF_Clear(){
+void RX_BUF_Clear()
+{
 	int i;
-	for(i=0;i<USART3_REC_LEN;i++){USART3_RX_BUF[i]=0;}
+	for(i=0;i<USART3_REC_LEN;i++)
+	{
+		USART3_RX_BUF[i]=0;
+	}
 }
 
 void u3_printf(char* fmt,...)  

@@ -86,6 +86,7 @@ void CONTROL(float rol, float pit, float yaw)
 	{	
 		Moto_PwmRflash(moto1,moto2,moto3,moto4);
 		//printf("%d\t%d\t%d\t%d\n",moto1,moto3,moto2,moto4);
+		//
 		OSTimeDlyHMSM(0,0,0,0);
 	}
 	else
@@ -98,7 +99,7 @@ Description:初始化PID参数
 **************************************************/
 void Pid_init(void)
 {
-	
+	printf("\n%f\n",psp);
 	PID_PIT.shell_P = psp;//30 140
 	PID_PIT.shell_D = 0;//
 	PID_PIT.shell_I = 0;//
