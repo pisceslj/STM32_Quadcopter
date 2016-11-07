@@ -26,8 +26,6 @@ extern float anglez_offset;
 extern OS_EVENT * ANGLE;  //–≈∫≈¡ø
 extern INT8U errANGLE;
 
-
-
 void Prepare_Data(void)
 {
 	static uint8_t filter_cnt=0;
@@ -185,12 +183,7 @@ void IMUupdate(float gx, float gy, float gz, float ax, float ay, float az)
 }
 
 
-
-
-
 // Header files
-
-
 
 
 void AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz) {				
@@ -202,23 +195,14 @@ void AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, floa
         // auxiliary variables to reduce number of repeated operations
 
         float q0q0 = q0*q0;
-
         float q0q1 = q0*q1;
-
         float q0q2 = q0*q2;
-
         float q0q3 = q0*q3;
-
         float q1q1 = q1*q1;
-
         float q1q2 = q1*q2;
-
         float q1q3 = q1*q3;
-
         float q2q2 = q2*q2;   
-
         float q2q3 = q2*q3;
-
         float q3q3 = q3*q3;          
         
         // normalise the measurements
@@ -299,9 +283,6 @@ void AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, floa
 				q1=temp1;
 				q2=temp2;
 				q3=temp3;
-				
-				
-				
 				
         // normalise quaternion
 

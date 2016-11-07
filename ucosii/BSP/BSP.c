@@ -114,22 +114,19 @@ void BSP_Init()
 //	EE_READ_GYRO_OFFSET();
 
 		printf("data init OK\n");
-	  EE_READ_PID();//从FLASH读取MPU6050参数
-		Pid_init();
-		EE_SAVE_PID();
+	  //EE_READ_PID();//从FLASH读取MPU6050参数
+		//Pid_init();
+		//EE_SAVE_PID();
 		EE_READ_PID_Send();
 		//已经过测试成功读取到闪存中数据
 		printf("pid test end OK\n");
-		
-		
 }
 	
-
-
-
 
 
 void SysTick_init(void)
 {
  SysTick_Config(SystemCoreClock/OS_TICKS_PER_SEC);//初始化并使能 SysTick 定时器 3.5库宏定义不同
 }
+
+

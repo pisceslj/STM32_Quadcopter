@@ -2,7 +2,7 @@
 ..\..\output\tim7.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\tim7.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\tim7.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\tim7.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\tim7.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\tim7.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\tim7.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\tim7.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h

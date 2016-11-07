@@ -2,7 +2,7 @@
 ..\..\output\motor.o: ..\..\BSP\Motor\motor.h
 ..\..\output\motor.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\motor.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\motor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\motor.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\motor.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\motor.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\motor.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -26,13 +26,13 @@
 ..\..\output\motor.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\motor.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\motor.o: ..\..\User\includes.h
-..\..\output\motor.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\..\output\motor.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\motor.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\motor.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\motor.o: ..\..\BSP\Usart\usart1.h
-..\..\output\motor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\motor.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\motor.o: ..\..\APP\CONTROL\control.h
 ..\..\output\motor.o: ..\..\BSP\eeprom\eeprom.h
 ..\..\output\motor.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\motor.o: ..\..\APP\app.h
-..\..\output\motor.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\motor.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h

@@ -10,6 +10,7 @@ void Task_atttitude_computation(void *p_arg)
 	Prepare_Data();
 	Read_HMC5883L();
 	Get_Attitude();
+	//lu add
   OSTimeDlyHMSM(0,0,0,2);
  }
 }

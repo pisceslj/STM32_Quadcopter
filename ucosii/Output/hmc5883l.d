@@ -2,7 +2,7 @@
 ..\..\output\hmc5883l.o: ..\..\User\includes.h
 ..\..\output\hmc5883l.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\hmc5883l.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\hmc5883l.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\hmc5883l.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\hmc5883l.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\hmc5883l.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\hmc5883l.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -26,13 +26,13 @@
 ..\..\output\hmc5883l.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\hmc5883l.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\hmc5883l.o: ..\..\User\includes.h
-..\..\output\hmc5883l.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\..\output\hmc5883l.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\hmc5883l.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\hmc5883l.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\hmc5883l.o: ..\..\BSP\Usart\usart1.h
-..\..\output\hmc5883l.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\hmc5883l.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\hmc5883l.o: ..\..\APP\CONTROL\control.h
 ..\..\output\hmc5883l.o: ..\..\BSP\eeprom\eeprom.h
 ..\..\output\hmc5883l.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\hmc5883l.o: ..\..\APP\app.h
-..\..\output\hmc5883l.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\hmc5883l.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h

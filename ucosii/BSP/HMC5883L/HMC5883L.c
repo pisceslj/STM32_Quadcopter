@@ -37,6 +37,7 @@ void Initialize_Cal_Variables(int MagX, int MagY, int  MagZ);
 void Calibrate(int MagX, int MagY, int  MagZ);
 void Compute_and_Save(void);
 void Hard_Iron_Correction();
+
 /************************************************************   
 * 函数名:Identify_HMC5883L  
 * 描述 : 设备识别 
@@ -251,3 +252,4 @@ void Read_HMC5883L(void)//读取
 	Magn_y=(BUF1[3] << 8) | BUF1[4]; //Combine MSB and LSB of Z Data output register
   Magn_z=(BUF1[5] << 8) | BUF1[6]; //Combine MSB and LSB of Z Data output register
 }
+

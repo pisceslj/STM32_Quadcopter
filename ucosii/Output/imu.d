@@ -2,7 +2,7 @@
 ..\..\output\imu.o: ..\..\BSP\MPU6050\IMU.h
 ..\..\output\imu.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\imu.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\imu.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\imu.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\imu.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\imu.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\imu.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -14,7 +14,7 @@
 ..\..\output\imu.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 ..\..\output\imu.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\imu.o: ..\..\BSP\MPU6050\MPU6050.h
-..\..\output\imu.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\..\output\imu.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\imu.o: ..\..\User\includes.h
 ..\..\output\imu.o: ..\..\ucosII\Source\ucos_ii.h
 ..\..\output\imu.o: ..\..\APP\app_cfg.h
@@ -30,9 +30,9 @@
 ..\..\output\imu.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\imu.o: ..\..\BSP\TIM7\tim7.h
 ..\..\output\imu.o: ..\..\BSP\Usart\usart1.h
-..\..\output\imu.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\imu.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\imu.o: ..\..\APP\CONTROL\control.h
 ..\..\output\imu.o: ..\..\BSP\eeprom\eeprom.h
 ..\..\output\imu.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\imu.o: ..\..\APP\app.h
-..\..\output\imu.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\imu.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h

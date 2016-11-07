@@ -2,7 +2,7 @@
 ..\..\output\mpu6050.o: ..\..\BSP\MPU6050\MPU6050.h
 ..\..\output\mpu6050.o: ..\..\Libraries\CMSIS\stm32f10x.h
 ..\..\output\mpu6050.o: ..\..\Libraries\CMSIS\core_cm3.h
-..\..\output\mpu6050.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\mpu6050.o: H:\Install\ARM\ARMCC\Bin\..\include\stdint.h
 ..\..\output\mpu6050.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
 ..\..\output\mpu6050.o: ..\..\User\stm32f10x_conf.h
 ..\..\output\mpu6050.o: ..\..\Libraries\FWlib\inc\stm32f10x_exti.h
@@ -27,12 +27,12 @@
 ..\..\output\mpu6050.o: ..\..\BSP\Motor\motor.h
 ..\..\output\mpu6050.o: ..\..\BSP\HMC5883L\HMC5883L.h
 ..\..\output\mpu6050.o: ..\..\User\includes.h
-..\..\output\mpu6050.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+..\..\output\mpu6050.o: H:\Install\ARM\ARMCC\Bin\..\include\math.h
 ..\..\output\mpu6050.o: ..\..\BSP\Receiver\Rev.h
 ..\..\output\mpu6050.o: ..\..\BSP\Usart\usart1.h
-..\..\output\mpu6050.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\mpu6050.o: H:\Install\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\mpu6050.o: ..\..\APP\CONTROL\control.h
 ..\..\output\mpu6050.o: ..\..\BSP\eeprom\eeprom.h
 ..\..\output\mpu6050.o: ..\..\BSP\eeprom\flash.h
 ..\..\output\mpu6050.o: ..\..\APP\app.h
-..\..\output\mpu6050.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\mpu6050.o: H:\Install\ARM\ARMCC\Bin\..\include\stdarg.h

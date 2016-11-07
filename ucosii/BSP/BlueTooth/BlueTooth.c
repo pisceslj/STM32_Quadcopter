@@ -3,9 +3,15 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "ucos_ii.h"
+#include "flash.h"
+#include "control.h"
 #define USART3_REC_LEN  			200 
 #define USART3_TX_LEN  			200 
+
+extern PID PID_ROL,PID_PIT,PID_YAW;
+
 //串口3中断服务程序
 //注意,读取USARTx->SR能避免莫名其妙的错误   
 u8 USART3_RX_BUF[USART3_REC_LEN]={0};     //接收缓冲,最大USART_REC_LEN个字节.
@@ -21,8 +27,6 @@ u8 Res;//字节接收
 u8 ARMED,pidset,send_angle;
 //PID设置缓冲
 PID P;
-
-
 
 void BT_Send(S_FLOAT_XYZ   *angleTX)
 {
@@ -72,8 +76,6 @@ void USART3_NVIC_Config(void){
 	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器
 }
 
-
-
 void USART3_IRQHandler(void)
 {
 	//操作系统中断 防止嵌套任务     重调度
@@ -83,7 +85,7 @@ void USART3_IRQHandler(void)
 		{
 		Res =USART_ReceiveData(USART3);//(USART3->DR);	//读取接收到的数据
 		
-		if((USART3_RX_STA&0X8000)==0)//接收未完成
+	if((USART3_RX_STA&0X8000)==0)//接收未完成
 			{
 				if(Res=='#'){USART3_RX_STA|=0X8000;Command_Read();}
 				else
@@ -96,8 +98,12 @@ void USART3_IRQHandler(void)
 		OSIntExit();		
 }
 
-void Command_Read(){
-	if(USART3_RX_STA&0x8000){
+void Command_Read()
+{
+	char *endptr;
+	float temp;
+	if(USART3_RX_STA&0x8000)
+	{
        if(strcmp((const char*)USART3_RX_BUF,"Yes")==0)u3_printf("copy");
 			 else if(strcmp((const char*)USART3_RX_BUF,"STOP")==0)
 			 {
@@ -113,7 +119,38 @@ void Command_Read(){
 							{send_angle=1;}
 			 else 
 			 {
-				u3_printf("undef info");
+				
+				//读取EEPROM值
+				EE_READ_PID(); 
+				//接收值
+				temp = strtod((const char*)USART3_RX_BUF,&endptr);
+			  
+				//修改对应PID参数值
+				if(ARMED == 0)
+				{
+						if(strcmp(endptr,"psp")== 0){PID_PIT.shell_P = temp;u3_printf(" psp changed to%lf",PID_PIT.shell_P);}
+						else if(strcmp(endptr,"psd")== 0){PID_PIT.shell_D = temp;u3_printf(" psd changed to%lf",PID_PIT.shell_D);}
+						else if(strcmp(endptr,"psi")== 0){PID_PIT.shell_I = temp;u3_printf(" psi changed to%lf",PID_PIT.shell_I);}
+						else if(strcmp(endptr,"pcp")== 0){PID_PIT.core_P = temp;u3_printf(" pcp changed to%lf",PID_PIT.core_P);}
+						else if(strcmp(endptr,"pcd")== 0){PID_PIT.core_D = temp;u3_printf(" pcd changed to%lf",PID_PIT.core_D);}
+			
+						else if(strcmp(endptr,"rsp")== 0){PID_ROL.shell_P = temp;u3_printf(" rsp changed to%lf",PID_ROL.shell_P);}
+						else if(strcmp(endptr,"rsd")== 0){PID_ROL.shell_D = temp;u3_printf(" rsd changed to%lf",PID_ROL.shell_D);}
+						else if(strcmp(endptr,"rsi")== 0){PID_ROL.shell_I = temp;u3_printf(" rsi changed to%lf",PID_ROL.shell_I);}
+						else if(strcmp(endptr,"rcp")== 0){PID_ROL.core_P = temp;u3_printf(" rcp changed to%lf",PID_ROL.core_P);}
+						else if(strcmp(endptr,"rcd")== 0){PID_ROL.core_D = temp;u3_printf(" rcd changed to%lf",PID_ROL.core_D);}
+			
+						else if(strcmp(endptr,"ysp")== 0){PID_YAW.shell_P = temp;u3_printf(" ysp changed to%lf",PID_YAW.shell_P);}
+						else if(strcmp(endptr,"ysd")== 0){PID_YAW.shell_D = temp;u3_printf(" ysd changed to%lf",PID_YAW.shell_D);}
+						else if(strcmp(endptr,"ysi")== 0){PID_YAW.shell_I = temp;u3_printf(" ysi changed to%lf",PID_YAW.shell_I);}
+						else if(strcmp(endptr,"ycp")== 0){PID_YAW.core_P = temp;u3_printf(" ycp changed to%lf",PID_YAW.core_P);}
+						else if(strcmp(endptr,"ycd")== 0){PID_YAW.core_D = temp;u3_printf(" ycd changed to%lf",PID_YAW.core_D);}
+						else u3_printf("undef info");
+				}
+				
+				//存入EEPROM
+				EE_SAVE_PID();
+				EE_READ_PID_Send();
 			 }
 			u3_printf("\r\n");
 			USART3_RX_STA=0;

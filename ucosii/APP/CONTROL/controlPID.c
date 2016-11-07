@@ -82,6 +82,7 @@ void CONTROL(float rol, float pit, float yaw)
 	if(ARMED){	
 		Moto_PwmRflash(moto1,moto2,moto3,moto4);
 	//printf("%d\t%d\t%d\t%d\n",moto1,moto3,moto2,moto4);
+		//printf("PIDS change to:%f",PID_PIT.shell_P);	
 	//OSTimeDlyHMSM(0,0,0,300);
 	}
 	else{
@@ -117,3 +118,4 @@ void Pid_init(void)
   PID_YAW.core_P=0.046;//;
   PID_YAW.core_D=0.012;////0.007;//06;//0.07;
 }
+

@@ -94,9 +94,9 @@ void USART1_IRQHandler(void)
 				else
 				{
 					USART_RX_STA|=0x8000;	//接收完成了 
-				
+					//接收简单处理函数
 					
-					
+
 				}
 			}
 			else //还没收到0X0D
@@ -113,3 +113,4 @@ void USART1_IRQHandler(void)
 		}
 	OSIntExit();	
 }
+

@@ -25,9 +25,10 @@ void Task_Start(void *p_arg)
 	
 	OSTaskCreate(Task_atttitude_pid,(void *)0, //创建姿态控制任务
 	&task_atttitude_pid_stk[TASK_STK_SIZE-1], TASK_ATTITUDE_PID_PRIO);
-	while(1){
-	OSTimeDlyHMSM(0,0,0,1000);
-	
+
+	while(1)
+	{
+		OSTimeDlyHMSM(0,0,0,1000);
 	}
 	
 }
