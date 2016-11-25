@@ -62,10 +62,10 @@ void CONTROL(float rol, float pit, float yaw)
 	if(Rc_Get.THROTTLE>1000)
 	{
 		//x 模式
-		moto3 = Rc_Get.THROTTLE - 500 - PID_ROL.core_out - PID_PIT.core_out + PID_YAW.core_out;
-		moto4 = Rc_Get.THROTTLE - 500 + PID_ROL.core_out - PID_PIT.core_out - PID_YAW.core_out;
+		moto3 = Rc_Get.THROTTLE - 500 - PID_ROL.core_out - PID_PIT.core_out + PID_YAW.core_out;// 贴 P15
+		moto4 = Rc_Get.THROTTLE - 500 + PID_ROL.core_out - PID_PIT.core_out - PID_YAW.core_out;//贴 P18
 		moto1 = Rc_Get.THROTTLE - 500 + PID_ROL.core_out + PID_PIT.core_out + PID_YAW.core_out;
-		moto2 = Rc_Get.THROTTLE - 500 - PID_ROL.core_out + PID_PIT.core_out - PID_YAW.core_out;
+		moto2 = Rc_Get.THROTTLE - 500 - PID_ROL.core_out + PID_PIT.core_out - PID_YAW.core_out+35 ;//
 		//+ 模式
 //		moto3 = Rc_Get.THROTTLE - 500 - PID_PIT.core_out + PID_YAW.core_out;
 //		moto4 = Rc_Get.THROTTLE - 500 - PID_ROL.core_out - PID_YAW.core_out;

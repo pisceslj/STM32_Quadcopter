@@ -114,12 +114,11 @@ void BSP_Init()
 //	EE_READ_GYRO_OFFSET();
 
 		printf("data init OK\n");
-	  //EE_READ_PID();//从FLASH读取MPU6050参数
-		//Pid_init();
-		//EE_SAVE_PID();
+
 		EE_READ_PID_Send();
 		//已经过测试成功读取到闪存中数据
 		printf("pid test end OK\n");
+		u3_printf("pid test end OK\n");
 }
 	
 

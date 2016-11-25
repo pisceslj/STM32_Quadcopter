@@ -62,6 +62,14 @@ void EE_INIT(void)
 //	EE_ReadVariable(VirtAddVarTab[EE_6050_GYRO_Y_OFFSET_ADDR], &GYRO_OFFSET.Y);
 //	EE_ReadVariable(VirtAddVarTab[EE_6050_GYRO_Z_OFFSET_ADDR], &GYRO_OFFSET.Z);
 //}
+void EE_INIT_PID(void)
+{
+		PID INIT={0};
+		PID_PIT=INIT;
+		PID_ROL=INIT;
+		PID_YAW=INIT;
+		EE_SAVE_PID();
+}
 void EE_SAVE_PID(void)
 {
 	u16 _temp;
@@ -98,24 +106,24 @@ void EE_SAVE_PID(void)
 
 	
 	_temp=PID_ROL.core_P*1000;
-	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_P_CORE],&_temp);
+	EE_WriteVariable(VirtAddVarTab[EE_PID_ROL_P_CORE],_temp);
 
 	_temp=PID_ROL.core_D*1000;
-	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_D_CORE],&_temp);
+	EE_WriteVariable(VirtAddVarTab[EE_PID_ROL_D_CORE],_temp);
 
 
 	_temp=PID_PIT.core_P*1000;
-	EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_P_CORE],&_temp);
+	EE_WriteVariable(VirtAddVarTab[EE_PID_PIT_P_CORE],_temp);
 	
 	_temp=PID_PIT.core_D *1000;
-	EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_D_CORE],&_temp);
+	EE_WriteVariable(VirtAddVarTab[EE_PID_PIT_D_CORE],_temp);
 	
 	
 	_temp=PID_YAW.core_P*1000;
-	EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_P_CORE],&_temp);
+	EE_WriteVariable(VirtAddVarTab[EE_PID_YAW_P_CORE],_temp);
 
 	_temp=PID_YAW.core_D*1000;
-	EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_D_CORE],&_temp);
+	EE_WriteVariable(VirtAddVarTab[EE_PID_YAW_D_CORE],_temp);
 	printf("\n\tsave ok\t\n");
 }
 void EE_READ_PID(void)
@@ -163,54 +171,54 @@ void EE_READ_PID_Send(void)		//从flash中获取 并且发送
 	u16 _temp;
 	
 	EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_P],&_temp);
-	printf("PID_PIT.shell_P : %f\n",(float)_temp/100);
+	u3_printf("PID_PIT.shell_P : %f\n",(float)_temp/100);
 //	PID_PIT.shell_P = (float)_temp / 100;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_I],&_temp);
-	printf("PID_PIT.shell_I : %f\n",(float)_temp/100);
+	u3_printf("PID_PIT.shell_I : %f\n",(float)_temp/100);
 //	PID_PIT.shell_I = (float)_temp / 100;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_D],&_temp);
-  printf("PID_PIT.shell_D : %f\n",(float)_temp/10000);
+  u3_printf("PID_PIT.shell_D : %f\n",(float)_temp/10000);
 //	PID_PIT.shell_D = (float)_temp / 10000;
 	
 	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_P],&_temp);
-	printf("PID_ROL_shell_P : %f\n",(float)_temp/100);
+	u3_printf("PID_ROL_shell_P : %f\n",(float)_temp/100);
 	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_I],&_temp);
-	printf("PID_ROL.shell_I : %f\n",(float)_temp/100);
+	u3_printf("PID_ROL.shell_I : %f\n",(float)_temp/100);
 //	PID_ROL.shell_I = (float)_temp / 100;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_D],&_temp);
-	printf("PID_ROL.shell_D : %f\n",(float)_temp/10000);
+	u3_printf("PID_ROL.shell_D : %f\n",(float)_temp/10000);
 //	PID_ROL.shell_D = (float)_temp / 10000;
 
   EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_P],&_temp);
-	printf("PID_YAW.shell_P : %f\n",(float)_temp/100);
+	u3_printf("PID_YAW.shell_P : %f\n",(float)_temp/100);
 //	PID_YAW.shell_P = (float)_temp / 100;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_I],&_temp);
-  printf("PID_YAW.shell_I : %f\n",(float)_temp/100);
+  u3_printf("PID_YAW.shell_I : %f\n",(float)_temp/100);
 //	PID_YAW.shell_I = (float)_temp / 100;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_D],&_temp);
-  printf("PID_YAW.shell_D : %f\n",(float)_temp/10000);
+  u3_printf("PID_YAW.shell_D : %f\n",(float)_temp/10000);
 //	PID_YAW.shell_D = (float)_temp / 10000;
 //	
 //	
   EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_P_CORE],&_temp);
-	printf("PID_PIT.core_P : %f\n",(float)_temp/1000);
+	u3_printf("PID_PIT.core_P : %f\n",(float)_temp/1000);
 //	PID_PIT.core_P = (float)_temp / 1000;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_PIT_D_CORE],&_temp);
-	printf("PID_PIT.core_D : %f\n",(float)_temp/1000);
+	u3_printf("PID_PIT.core_D : %f\n",(float)_temp/1000);
 //	PID_PIT.core_D = (float)_temp / 1000;
 
 	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_P_CORE],&_temp);
-	printf("PID_ROL.core_P : %f\n",(float)_temp/1000);
+	u3_printf("PID_ROL.core_P : %f\n",(float)_temp/1000);
 //	PID_ROL.core_P = (float)_temp / 1000;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_ROL_D_CORE],&_temp);
-	printf("PID_ROL.core_D : %f\n",(float)_temp/1000);
+	u3_printf("PID_ROL.core_D : %f\n",(float)_temp/1000);
 //	PID_ROL.core_D = (float)_temp / 1000;
 	
 	EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_P_CORE],&_temp);
-  printf("PID_YAW.core_P : %f\n",(float)_temp/1000);
+  u3_printf("PID_YAW.core_P : %f\n",(float)_temp/1000);
 //	PID_YAW.core_P = (float)_temp / 1000;
 	EE_ReadVariable(VirtAddVarTab[EE_PID_YAW_D_CORE],&_temp);
-  printf("PID_YAW.core_D : %f\n",(float)_temp/1000);
+  u3_printf("PID_YAW.core_D : %f\n",(float)_temp/1000);
 //	PID_YAW.core_D = (float)_temp / 1000;
 	
 	
@@ -248,3 +256,4 @@ void EE_READ_PID_Send(void)		//从flash中获取 并且发送
 //	}
 	
 }
+

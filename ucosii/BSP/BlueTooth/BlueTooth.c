@@ -9,7 +9,7 @@
 #include "control.h"
 #define USART3_REC_LEN  			200 
 #define USART3_TX_LEN  			200 
-
+void EE_INIT_PID(void);
 extern PID PID_ROL,PID_PIT,PID_YAW;
 
 //串口3中断服务程序
@@ -30,8 +30,9 @@ PID P;
 
 void BT_Send(S_FLOAT_XYZ   *angleTX)
 {
-	printf("pitch %f;roll %f;yaw %f\n",angleTX->Y,angleTX->X,angleTX->Z);
+	u3_printf("pitch %f;roll %f;yaw %f\n",angleTX->Y,angleTX->X,angleTX->Z);
 }
+
 void BLUETOOTH_GPIO_Config(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -105,7 +106,7 @@ void Command_Read()
 	if(USART3_RX_STA&0x8000)
 	{
        if(strcmp((const char*)USART3_RX_BUF,"Yes")==0)u3_printf("copy");
-			 else if(strcmp((const char*)USART3_RX_BUF,"STOP")==0)
+			 else if(strcmp((const char*)USART3_RX_BUF,"s")==0)
 			 {
 			 		ARMED=0;
 				  u3_printf("Stop Motor");
@@ -117,7 +118,9 @@ void Command_Read()
 			 }
 			 else if(strcmp((const char*)USART3_RX_BUF,"ANGLE")==0)
 							{send_angle=1;}
-			 else 
+				else if(strcmp((const char*)USART3_RX_BUF,"clr")==0)
+				{EE_INIT_PID();}
+				else 
 			 {
 				
 				//读取EEPROM值
@@ -128,24 +131,25 @@ void Command_Read()
 				//修改对应PID参数值
 				if(ARMED == 0)
 				{
-						if(strcmp(endptr,"psp")== 0){PID_PIT.shell_P = temp;u3_printf(" psp changed to%lf",PID_PIT.shell_P);}
-						else if(strcmp(endptr,"psd")== 0){PID_PIT.shell_D = temp;u3_printf(" psd changed to%lf",PID_PIT.shell_D);}
-						else if(strcmp(endptr,"psi")== 0){PID_PIT.shell_I = temp;u3_printf(" psi changed to%lf",PID_PIT.shell_I);}
-						else if(strcmp(endptr,"pcp")== 0){PID_PIT.core_P = temp;u3_printf(" pcp changed to%lf",PID_PIT.core_P);}
-						else if(strcmp(endptr,"pcd")== 0){PID_PIT.core_D = temp;u3_printf(" pcd changed to%lf",PID_PIT.core_D);}
+						if(strcmp(endptr,"psp")== 0){PID_PIT.shell_P = temp;}
+						else if(strcmp(endptr,"psd")== 0){PID_PIT.shell_D = temp;}
+						else if(strcmp(endptr,"psi")== 0){PID_PIT.shell_I = temp;}
+						else if(strcmp(endptr,"pcp")== 0){PID_PIT.core_P = temp;}
+						else if(strcmp(endptr,"pcd")== 0){PID_PIT.core_D = temp;}
 			
-						else if(strcmp(endptr,"rsp")== 0){PID_ROL.shell_P = temp;u3_printf(" rsp changed to%lf",PID_ROL.shell_P);}
-						else if(strcmp(endptr,"rsd")== 0){PID_ROL.shell_D = temp;u3_printf(" rsd changed to%lf",PID_ROL.shell_D);}
-						else if(strcmp(endptr,"rsi")== 0){PID_ROL.shell_I = temp;u3_printf(" rsi changed to%lf",PID_ROL.shell_I);}
-						else if(strcmp(endptr,"rcp")== 0){PID_ROL.core_P = temp;u3_printf(" rcp changed to%lf",PID_ROL.core_P);}
-						else if(strcmp(endptr,"rcd")== 0){PID_ROL.core_D = temp;u3_printf(" rcd changed to%lf",PID_ROL.core_D);}
+						else if(strcmp(endptr,"rsp")== 0){PID_ROL.shell_P = temp;}
+						else if(strcmp(endptr,"rsd")== 0){PID_ROL.shell_D = temp;}
+						else if(strcmp(endptr,"rsi")== 0){PID_ROL.shell_I = temp;}
+						else if(strcmp(endptr,"rcp")== 0){PID_ROL.core_P = temp;}
+						else if(strcmp(endptr,"rcd")== 0){PID_ROL.core_D = temp;}
 			
-						else if(strcmp(endptr,"ysp")== 0){PID_YAW.shell_P = temp;u3_printf(" ysp changed to%lf",PID_YAW.shell_P);}
-						else if(strcmp(endptr,"ysd")== 0){PID_YAW.shell_D = temp;u3_printf(" ysd changed to%lf",PID_YAW.shell_D);}
-						else if(strcmp(endptr,"ysi")== 0){PID_YAW.shell_I = temp;u3_printf(" ysi changed to%lf",PID_YAW.shell_I);}
-						else if(strcmp(endptr,"ycp")== 0){PID_YAW.core_P = temp;u3_printf(" ycp changed to%lf",PID_YAW.core_P);}
-						else if(strcmp(endptr,"ycd")== 0){PID_YAW.core_D = temp;u3_printf(" ycd changed to%lf",PID_YAW.core_D);}
+						else if(strcmp(endptr,"ysp")== 0){PID_YAW.shell_P = temp;}
+						else if(strcmp(endptr,"ysd")== 0){PID_YAW.shell_D = temp;}
+						else if(strcmp(endptr,"ysi")== 0){PID_YAW.shell_I = temp;}
+						else if(strcmp(endptr,"ycp")== 0){PID_YAW.core_P = temp;}
+						else if(strcmp(endptr,"ycd")== 0){PID_YAW.core_D = temp;}
 						else u3_printf("undef info");
+						
 				}
 				
 				//存入EEPROM

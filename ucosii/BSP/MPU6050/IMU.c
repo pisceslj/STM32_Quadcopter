@@ -316,7 +316,7 @@ void AHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, floa
 			if(i>=250)
 		{
 			
-		printf("X:%f  Y:%f   Z: %f\n",Q_ANGLE.X,Q_ANGLE.Y,Q_ANGLE.Z);
+		//printf("X:%f  Y:%f   Z: %f\n",Q_ANGLE.X,Q_ANGLE.Y,Q_ANGLE.Z);
 			i=0;
 		}
 		i++;	

@@ -2,6 +2,14 @@
 #define _DATA_TRANSFER_H_
 #include "stm32f10x.h"
 
+typedef struct dt_flag{
+		int send_senser;
+	  int send_status;
+		int send_rcdata;
+	  int send_motopwm;
+	  int send_power;
+}dt_flag_t;
+
 void Data_Exchange(void);
 void Send_Data(u8 *dataToSend , u8 length);
 static void Send_Check(u8 head, u8 check_sum);

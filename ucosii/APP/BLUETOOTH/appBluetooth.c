@@ -26,7 +26,7 @@ void Task_BlueTooth(void*p_arg)
 		 pidset=0;
 		}
 		//BT_Send(angleTX);
-		OSTimeDlyHMSM(0,0,0,100);
+		OSTimeDlyHMSM(0,0,1,0);
 	}
 }
 

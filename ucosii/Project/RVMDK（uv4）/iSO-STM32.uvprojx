@@ -332,7 +332,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS;..\..\User;..\..\Libraries\FWlib\inc;..\..\APP;..\..\BSP;..\..\ucosII\Ports;..\..\ucosII\Source;..\..\BSP\BlueTooth;..\..\BSP\Delay;..\..\BSP\GPS;..\..\BSP\HMC5883L;..\..\BSP\I2cdev;..\..\BSP\Motor;..\..\BSP\MPU6050;..\..\BSP\MS5611;..\..\BSP\Receiver;..\..\BSP\TIM7;..\..\BSP\Usart;..\..\APP\CONTROL;..\..\APP\IMU;..\..\BSP\eeprom</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS;..\..\User;..\..\Libraries\FWlib\inc;..\..\APP;..\..\BSP;..\..\ucosII\Ports;..\..\ucosII\Source;..\..\BSP\BlueTooth;..\..\BSP\Delay;..\..\BSP\GPS;..\..\BSP\HMC5883L;..\..\BSP\I2cdev;..\..\BSP\Motor;..\..\BSP\MPU6050;..\..\BSP\MS5611;..\..\BSP\Receiver;..\..\BSP\TIM7;..\..\BSP\Usart;..\..\APP\CONTROL;..\..\APP\IMU;..\..\BSP\eeprom;..\..\BSP\Data_transfer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
